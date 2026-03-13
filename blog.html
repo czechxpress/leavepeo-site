@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — PEO Exit Insights & Guides | LeavePEO.com</title>
+    <meta name="description" content="Expert guides on leaving your PEO. Cost breakdowns, exit checklists, ADP TotalSource transitions, and strategies to save $90K-$100K+ annually.">
+    <link rel="canonical" href="https://leavepeo.com/blog">
+    <meta property="og:title" content="Blog — PEO Exit Insights & Guides | LeavePEO.com">
+    <meta property="og:description" content="Expert guides on leaving your PEO. Cost breakdowns, exit checklists, and transition strategies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leavepeo.com/blog">
+    <meta property="og:site_name" content="LeavePEO.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%235B7B6A'/%3E%3Ctext x='4' y='23' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23F5F0EB'%3EL%3C/text%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23C9A96E'%3EP%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --cream: #F5F0EB;
+            --sage: #5B7B6A;
+            --sage-dim: rgba(91,123,106,0.08);
+            --sage-light: #e8eeeb;
+            --sage-dark: #4a6556;
+            --charcoal: #2C2C2C;
+            --mid-text: #555;
+            --warm-gray: #6B6563;
+            --gold: #C9A96E;
+            --gold-hover: #B8891F;
+            --rust: #B85C3A;
+            --white: #FFFFFF;
+        }
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.7;
+        }
+
+        /* NAV - matches site */
+        nav {
+            background: var(--white);
+            padding: 0.9rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+        .logo {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--sage);
+            text-decoration: none;
+        }
+        .logo span { color: var(--gold); }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { color: var(--mid-text); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--sage); }
+        .nav-links a.active { color: var(--sage); font-weight: 600; }
+        .btn { padding: 0.7rem 1.6rem; border-radius: 8px; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; border: none; font-family: 'Outfit', sans-serif; }
+        .btn-primary { background: var(--gold); color: var(--charcoal); }
+        .btn-primary:hover { background: #B8891F; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,152,46,0.35); }
+        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--charcoal); margin: 5px 0; transition: 0.3s; }
+
+        /* HERO */
+        .blog-hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem 2rem 3rem;
+            text-align: center;
+        }
+        .blog-hero h1 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.8rem;
+        }
+        .blog-hero p {
+            font-size: 1.15rem;
+            color: var(--warm-gray);
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* POST CARDS */
+        .posts-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .post-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .post-tag {
+            display: inline-block;
+            background: var(--sage-light);
+            color: var(--sage);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+        }
+        .post-card h2 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+        .post-card p {
+            color: var(--warm-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .post-card .read-more {
+            color: var(--sage);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+        .post-arrow {
+            width: 48px;
+            height: 48px;
+            background: var(--sage-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sage);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        .post-card:hover .post-arrow {
+            background: var(--sage);
+            color: var(--white);
+        }
+
+        /* CTA BAND */
+        .cta-band {
+            background: var(--sage);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .cta-band h2 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .cta-band p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        .cta-band a {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 0.9rem 2.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .cta-band a:hover { background: #B8891F; transform: translateY(-2px); }
+
+        /* FOOTER */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.65);
+            padding: 3rem 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer a { color: var(--gold); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-nav { margin-bottom: 1rem; }
+        .footer-nav a { margin: 0 1rem; }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 { font-size: 2.2rem; }
+            .blog-hero { padding: 3rem 1.5rem 2rem; }
+            .post-card { grid-template-columns: 1fr; padding: 1.8rem; }
+            .post-arrow { display: none; }
+            .nav-links { display: none; }
+            nav.open .nav-links { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 1rem 2rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+            .mobile-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="logo">Leave<span>PEO</span></a>
+    <button class="mobile-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+        <a href="/#why">Why Leave</a>
+        <a href="/#process">Our Process</a>
+        <a href="/blog" class="active">Blog</a>
+        <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact" class="btn btn-primary">Get Free Analysis</a>
+    </div>
+</nav>
+
+<div class="blog-hero">
+    <h1>PEO Exit Insights</h1>
+    <p>Guides, cost analyses, and practical advice from the team that's managed hundreds of PEO transitions.</p>
+</div>
+
+<div class="posts-grid">
+
+    <a href="/blog-cost-of-staying" class="post-card">
+        <div>
+            <div class="post-tag">PEO Costs</div>
+            <h2>How Much Does It Really Cost to Stay in a PEO?</h2>
+            <p>Most companies in a PEO don't know what they're actually paying. We break down the hidden costs buried in bundled invoices, from admin fees to medical markups to workers' comp padding.</p>
+            <span class="read-more">Read article →</span>
+        </div>
+        <div class="post-arrow">→</div>
+    </a>
+
+    <a href="/blog-leave-adp-totalsource" class="post-card">
+        <div>
+            <div class="post-tag">ADP TotalSource</div>
+            <h2>How to Leave ADP TotalSource: A Step-by-Step Guide</h2>
+            <p>ADP TotalSource is the largest PEO in the country. Leaving it is completely doable, but you need a plan. Here's exactly how the process works, from contract review to go-live.</p>
+            <span class="read-more">Read article →</span>
+        </div>
+        <div class="post-arrow">→</div>
+    </a>
+
+    <a href="/blog-peo-exit-checklist" class="post-card">
+        <div>
+            <div class="post-tag">Exit Checklist</div>
+            <h2>PEO Exit Checklist: Everything You Need Before You Leave</h2>
+            <p>A practical, line-by-line checklist from the team that's handled hundreds of PEO exits. Documents, timeline, benefits, HRIS, compliance, and what to expect at every phase.</p>
+            <span class="read-more">Read article →</span>
+        </div>
+        <div class="post-arrow">→</div>
+    </a>
+
+</div>
+
+<div class="cta-band">
+    <h2>Ready to See What You'd Save?</h2>
+    <p>Free PEO exit analysis. No obligation. Backed by IMA Financial Group.</p>
+    <a href="/contact">Get Your Free Analysis</a>
+</div>
+
+<footer>
+    <div class="footer-nav">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+    </div>
+    <p>&copy; 2026 LeavePEO.com &mdash; A National Practice of <a href="https://imafg.com" target="_blank">IMA Financial Group</a></p>
+    <p style="margin-top:0.5rem;">Email: <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a></p>
+</footer>
+
+</body>
+</html>

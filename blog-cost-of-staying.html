@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Much Does It Really Cost to Stay in a PEO? | LeavePEO.com</title>
+    <meta name="description" content="Most companies in a PEO don't know what they're actually paying. We break down the hidden costs buried in bundled invoices — admin fees, benefit markups, workers' comp padding, and more.">
+    <meta name="author" content="LeavePEO — IMA Financial Group">
+    <link rel="canonical" href="https://leavepeo.com/blog-cost-of-staying.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="How Much Does It Really Cost to Stay in a PEO?">
+    <meta property="og:description" content="Most companies don't know what their PEO actually costs. We break down the hidden fees buried in bundled invoices.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leavepeo.com/blog-cost-of-staying.html">
+    <meta property="og:site_name" content="LeavePEO.com">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How Much Does It Really Cost to Stay in a PEO?">
+    <meta name="twitter:description" content="Most companies don't know what their PEO actually costs. We break down the hidden fees buried in bundled invoices.">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Much Does It Really Cost to Stay in a PEO?",
+        "description": "Most companies in a PEO don't know what they're actually paying. We break down the hidden costs buried in bundled invoices.",
+        "author": {
+            "@type": "Organization",
+            "name": "LeavePEO — IMA Financial Group"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LeavePEO.com"
+        },
+        "datePublished": "2026-03-12",
+        "mainEntityOfPage": "https://leavepeo.com/blog-cost-of-staying.html"
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%235B7B6A'/%3E%3Ctext x='4' y='23' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23F5F0EB'%3EL%3C/text%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23C9A96E'%3EP%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #F5F0EB;
+            --sage: #5B7B6A;
+            --sage-light: #e8eeeb;
+            --sage-dark: #4a6556;
+            --charcoal: #2C2C2C;
+            --warm-gray: #6B6563;
+            --gold: #C9A96E;
+            --gold-hover: #b8954d;
+            --rust: #B85C3A;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* NAV */
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0dbd5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-logo {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--sage);
+            text-decoration: none;
+        }
+        .nav-logo span { color: var(--gold); }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .nav-links a:hover { color: var(--sage); }
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--charcoal) !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600 !important;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--gold-hover) !important; }
+
+        /* BLOG HERO */
+        .blog-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+        .blog-tag {
+            display: inline-block;
+            background: var(--sage-light);
+            color: var(--sage);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+        .blog-hero h1 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .blog-hero .subtitle {
+            font-size: 1.15rem;
+            color: var(--warm-gray);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            color: var(--warm-gray);
+        }
+
+        /* ARTICLE BODY */
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: #3a3a3a;
+        }
+        .article-body h2 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin: 2.5rem 0 1rem;
+        }
+        .article-body h3 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin: 2rem 0 0.8rem;
+        }
+        .article-body strong {
+            color: var(--charcoal);
+        }
+
+        /* CALLOUT BOX */
+        .callout {
+            background: var(--white);
+            border-left: 4px solid var(--sage);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .callout.warning {
+            border-left-color: var(--rust);
+        }
+        .callout p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        .callout p:last-child { margin-bottom: 0; }
+
+        /* COST TABLE */
+        .cost-table-wrap {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            overflow-x: auto;
+        }
+        .cost-table-wrap h4 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .cost-table th {
+            text-align: left;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--warm-gray);
+            padding: 0.8rem 1rem;
+            border-bottom: 2px solid var(--sage-light);
+        }
+        .cost-table td {
+            padding: 0.8rem 1rem;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f0ece7;
+        }
+        .cost-table tr:last-child td {
+            border-bottom: none;
+            font-weight: 600;
+            color: var(--sage-dark);
+        }
+        .cost-table .highlight-cell {
+            color: var(--rust);
+            font-weight: 600;
+        }
+
+        /* MID-ARTICLE CTA */
+        .mid-cta {
+            background: var(--sage);
+            color: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .mid-cta h3 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            color: var(--white) !important;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem !important;
+        }
+        .mid-cta p {
+            color: rgba(255,255,255,0.9) !important;
+            margin-bottom: 1.5rem !important;
+            font-size: 1rem !important;
+        }
+        .mid-cta a {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .mid-cta a:hover { background: var(--gold-hover); }
+
+        /* FOOTER */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer a { color: var(--gold); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-nav { margin-bottom: 1rem; }
+        .footer-nav a { margin: 0 1rem; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .blog-hero h1 { font-size: 2rem; }
+            .blog-hero { padding: 3rem 1.5rem 1.5rem; }
+            .article-body { padding: 1.5rem 1.5rem 3rem; }
+            .nav-links a:not(.nav-cta) { display: none; }
+            .cost-table-wrap { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main navigation">
+        <a href="/" class="nav-logo">Leave<span>PEO</span></a>
+        <div class="nav-links">
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contact">Contact</a>
+            <a href="/contact" class="nav-cta">Get Free Analysis</a>
+        </div>
+    </nav>
+
+    <article>
+        <div class="blog-hero">
+            <div class="blog-tag">PEO Costs</div>
+            <h1>How Much Does It Really Cost to Stay in a PEO?</h1>
+            <p class="subtitle">Most companies in a PEO don't know what they're actually paying. Here's how to find the real number buried in your bundled invoice.</p>
+            <p class="blog-meta">LeavePEO &mdash; IMA Financial Group &nbsp;|&nbsp; March 2026 &nbsp;|&nbsp; 8 min read</p>
+        </div>
+
+        <div class="article-body">
+
+            <p>Here's a question that should be simple but almost never is: <strong>How much does your PEO cost you?</strong></p>
+
+            <p>If your answer is "I know what we pay per employee per month," you're looking at the wrong number. That PEPM fee is just the visible part. The real cost of a PEO is spread across your entire invoice in ways that are designed to be hard to see. Admin fees, benefit markups, workers' compensation padding, technology surcharges, and built-in margins on every line item. Most companies we talk to are paying 30% to 60% more than they would on the open market, and they don't realize it because PEO invoices aren't built for transparency.</p>
+
+            <p>We've analyzed hundreds of PEO invoices across ADP TotalSource, TriNet, Insperity, Engage, Justworks, and Rippling. The pattern is remarkably consistent. Let's break down where the money actually goes.</p>
+
+            <h2>The Admin Fee: What You See</h2>
+
+            <p>This is the number most companies know. PEOs typically charge somewhere between $100 and $250 per employee per month in administrative fees. For a 100-person company, that's $120,000 to $300,000 per year just in admin costs. That covers payroll processing, basic HR support, compliance, and access to their technology platform.</p>
+
+            <p>On its own, that might seem reasonable. But the admin fee is often the smallest part of what you're actually overpaying.</p>
+
+            <h2>The Medical Benefit Markup: What You Don't See</h2>
+
+            <p>This is where the real money hides. PEOs bundle your employees into their master health plan. That means your company doesn't have its own policy, its own claims experience, or its own renewal. You're pooled with thousands of other companies, and the PEO sets the rates.</p>
+
+            <p>The problem? <strong>You have no way to know if those rates are competitive.</strong> PEOs don't share claims data. They don't let you see loss ratios. You can't take your experience to the open market and compare because you don't have any experience to show. You're buying blind, every single year.</p>
+
+            <div class="callout warning">
+                <p><strong>The claims data gap is the single biggest reason companies overpay in a PEO.</strong> Without claims data, no broker can accurately model whether your company would do better on a fully insured, level-funded, or self-funded plan. You're locked into whatever the PEO offers, at whatever price they set.</p>
+            </div>
+
+            <p>When we run a full market analysis for companies leaving a PEO, the medical benefit savings alone typically account for 40% to 60% of the total reduction. That's not a rounding error. For a 150-employee company, that can be $60,000 to $120,000 per year in medical costs alone.</p>
+
+            <h2>Workers' Compensation: The Quiet Markup</h2>
+
+            <p>PEOs handle your workers' comp coverage under their master policy. Convenient? Sure. But the premium you're paying is almost always marked up above what you'd get with a standalone policy. PEOs build margin into the workers' comp line, and because it's bundled into your overall invoice, most companies never question it.</p>
+
+            <p>When we unbundle workers' comp and take it to market separately, we routinely see 15% to 30% reductions. For companies in industries with higher risk classifications (manufacturing, construction, healthcare), the savings can be even more significant.</p>
+
+            <h2>Ancillary Benefits: Death by a Thousand Cuts</h2>
+
+            <p>Dental, vision, life insurance, short-term disability, long-term disability, accident, critical illness. Each one of these lines is bundled into your PEO invoice. Each one carries a margin. Individually, the overcharge on any single ancillary line might be small. But stack them all up across your entire workforce, and you're looking at another $10,000 to $30,000 per year that could be saved by marketing each line independently to competing carriers.</p>
+
+            <h2>Technology Fees: Paying for a Platform You Don't Control</h2>
+
+            <p>Most PEOs include their HRIS/payroll platform as part of the package. Some charge a visible technology fee; others bury it in the admin rate. Either way, you're paying for a system you don't own, can't customize, and can't take with you when you leave.</p>
+
+            <p>Modern HRIS platforms like Paylocity, ADP Workforce Now, Paychex Flex, Rippling, UKG, or Paycom typically cost $8 to $25 per employee per month. Your PEO's technology component is almost certainly priced above that, and the platform usually offers less flexibility than what's available on the open market.</p>
+
+            <h2>What Does This All Add Up To?</h2>
+
+            <p>Let's look at a realistic example. This is based on an actual analysis we ran for a 120-employee company exiting a major PEO:</p>
+
+            <div class="cost-table-wrap">
+                <h4>Annual Cost Comparison: PEO vs. Open Market</h4>
+                <table class="cost-table">
+                    <thead>
+                        <tr>
+                            <th>Cost Category</th>
+                            <th>In the PEO</th>
+                            <th>Open Market</th>
+                            <th>Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Admin / Service Fees</td>
+                            <td>$204,000</td>
+                            <td>$0*</td>
+                            <td class="highlight-cell">$204,000</td>
+                        </tr>
+                        <tr>
+                            <td>Medical Benefits</td>
+                            <td>$1,440,000</td>
+                            <td>$1,368,000</td>
+                            <td class="highlight-cell">$72,000</td>
+                        </tr>
+                        <tr>
+                            <td>Dental, Vision & Ancillary</td>
+                            <td>$96,000</td>
+                            <td>$78,000</td>
+                            <td class="highlight-cell">$18,000</td>
+                        </tr>
+                        <tr>
+                            <td>Workers' Compensation</td>
+                            <td>$84,000</td>
+                            <td>$64,000</td>
+                            <td class="highlight-cell">$20,000</td>
+                        </tr>
+                        <tr>
+                            <td>HRIS / Payroll Technology</td>
+                            <td>Bundled above</td>
+                            <td>$21,600</td>
+                            <td>Included</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Annual Cost</strong></td>
+                            <td><strong>$1,824,000</strong></td>
+                            <td><strong>$1,531,600</strong></td>
+                            <td class="highlight-cell"><strong>$292,400</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size: 0.8rem; color: var(--warm-gray); margin-top: 0.8rem;">*Admin fees are replaced by broker advisory services at no direct cost to the employer when working with LeavePEO / IMA Financial Group.</p>
+            </div>
+
+            <p>That's nearly $300,000 per year. And this is not an outlier. Our clients typically save $90,000 to $100,000+ annually. Companies with 150 or more employees regularly see savings well above that.</p>
+
+            <h2>Why Don't More Companies Leave?</h2>
+
+            <p>Two reasons: fear and inertia.</p>
+
+            <p><strong>Fear</strong> sounds like: "What if the transition is a disaster? What if our employees have gaps in coverage? What if we lose our HR support?" These are legitimate concerns, and rushed exits do cause real problems. That's why a proper PEO exit takes a minimum of 90 days and involves coordinating benefits, payroll, HRIS, workers' comp, EPLI, and compliance all at once. Done right, your employees notice nothing except better benefits and a more modern technology platform.</p>
+
+            <p><strong>Inertia</strong> sounds like: "It's easier to just stay." And it is easier. Renewing with your PEO takes zero effort. But "easy" costs your company six figures every single year. The question isn't whether you can afford to leave. It's whether you can afford to keep staying.</p>
+
+            <div class="mid-cta">
+                <h3>Find Out What You're Actually Paying</h3>
+                <p>We'll analyze your PEO invoices and census data and show you exactly what you'd save on the open market. Free, no obligation.</p>
+                <a href="/contact">Get Your Free Analysis</a>
+            </div>
+
+            <h2>How to Start Seeing the Real Numbers</h2>
+
+            <p>The first step is simple: get your invoices analyzed by someone who isn't your PEO. An independent analysis requires your current PEO invoice broken down by employee, your employee census (demographics, dependents, coverage tiers), and your plan details (SBCs, current rates, renewal date).</p>
+
+            <p>From there, we run a full market comparison across medical, dental, vision, ancillary, workers' comp, and HRIS. We model multiple funding strategies, including fully insured, level-funded, and self-funded options, to identify which approach saves your company the most money. Because PEOs don't provide claims data, we use census-based actuarial modeling to bridge the gap and project where you'd land on the open market.</p>
+
+            <p>The analysis takes about two weeks from the time we receive your documents. If the numbers show you should stay in your PEO, we'll tell you that. We'd rather give you an honest answer than push a transition that doesn't make financial sense.</p>
+
+            <p>But in hundreds of analyses, the numbers almost always point the same direction: out.</p>
+
+            <h2>The Bottom Line</h2>
+
+            <p>Your PEO invoice is not a transparent document. It's a bundled package designed to make it difficult to compare costs line by line. That's not an accident. It's the business model.</p>
+
+            <p>The real cost of staying in a PEO isn't the admin fee you can see. It's the cumulative overpayment across every line item you can't. For most companies with 40 or more employees, that number is significant enough to justify a serious look at the alternative.</p>
+
+            <p>You don't have to commit to leaving to find out what you're actually paying. You just have to be willing to look at the numbers.</p>
+
+            <div class="mid-cta">
+                <h3>Ready to See What You'd Save?</h3>
+                <p>No cost. No obligation. Just the numbers. Backed by IMA Financial Group, the 2nd largest independent brokerage in the country.</p>
+                <a href="/contact">Get Your Free Analysis</a>
+            </div>
+
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <p>&copy; 2026 LeavePEO.com &mdash; A National Practice of <a href="https://imafg.com" target="_blank">IMA Financial Group</a></p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a></p>
+    </footer>
+
+</body>
+</html>

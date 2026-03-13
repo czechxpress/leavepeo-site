@@ -1,0 +1,34 @@
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-cost-of-staying"
+  to = "/blog-cost-of-staying.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-leave-adp-totalsource"
+  to = "/blog-leave-adp-totalsource.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-peo-exit-checklist"
+  to = "/blog-peo-exit-checklist.html"
+  status = 200
