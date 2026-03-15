@@ -32,3 +32,18 @@
   from = "/blog-peo-exit-checklist"
   to = "/blog-peo-exit-checklist.html"
   status = 200
+
+[[redirects]]
+  from = "/blog-workers-comp-epli"
+  to = "/blog-workers-comp-epli.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-401k-transition"
+  to = "/blog-401k-transition.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-peo-tax-credits"
+  to = "/blog-peo-tax-credits.html"
+  status = 200
