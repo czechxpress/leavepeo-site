@@ -47,3 +47,8 @@
   from = "/blog-peo-tax-credits"
   to = "/blog-peo-tax-credits.html"
   status = 200
+
+[[redirects]]
+  from = "/blog-funding-options"
+  to = "/blog-funding-options.html"
+  status = 200
