@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inside a Real PEO Exit: How We Found $121K in Annual Savings for a 62-Employee Tech Company | LeavePEO.com</title>
+<meta name="description" content="A line-by-line forensic walkthrough of an actual PEO exit analysis. Real invoices, real market quotes, real savings. See exactly how we took apart a PEO's bundled pricing and found $121,000 in annual savings.">
+<meta name="keywords" content="PEO exit case study, PEO exit savings, PEO invoice analysis, leave PEO example, PEO cost analysis, PEO exit process">
+<link rel="canonical" href="https://leavepeo.com/blog-peo-exit-case-study">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F51MZYJYMK"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F51MZYJYMK');</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#1a1a2e;line-height:1.7;background:#fff}
+a{color:#c8a951;text-decoration:none;transition:color .2s}
+a:hover{color:#b8993f}
+
+/* NAV */
+nav{background:#1a1a2e;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.nav-logo{font-size:1.4rem;font-weight:700;color:#c8a951;letter-spacing:1px}
+.nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{color:#ccc;font-size:.9rem;transition:color .2s}
+.nav-links a:hover{color:#c8a951}
+.nav-cta{background:#c8a951;color:#1a1a2e !important;padding:.5rem 1.2rem;border-radius:6px;font-weight:600;font-size:.85rem}
+.nav-cta:hover{background:#b8993f}
+
+/* ARTICLE */
+.article-header{max-width:800px;margin:0 auto;padding:3rem 2rem 1rem}
+.article-tag{display:inline-block;background:#f0e6c8;color:#8a7340;padding:.3rem .8rem;border-radius:4px;font-size:.8rem;font-weight:600;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.5px}
+.article-header h1{font-size:2.4rem;line-height:1.2;color:#1a1a2e;margin-bottom:1rem;font-weight:800}
+.article-subtitle{font-size:1.15rem;color:#555;margin-bottom:1.5rem;line-height:1.6}
+.article-meta{font-size:.85rem;color:#888;padding-bottom:1.5rem;border-bottom:1px solid #e5e5e5}
+
+.article-body{max-width:800px;margin:0 auto;padding:2rem}
+.article-body p{margin-bottom:1.4rem;font-size:1.05rem;color:#333}
+.article-body h2{font-size:1.6rem;color:#1a1a2e;margin:2.5rem 0 1rem;font-weight:700;padding-top:1rem}
+.article-body h3{font-size:1.25rem;color:#1a1a2e;margin:2rem 0 .8rem;font-weight:600}
+.article-body strong{color:#1a1a2e}
+.article-body ul,.article-body ol{margin:1rem 0 1.5rem 1.5rem}
+.article-body li{margin-bottom:.5rem;font-size:1.05rem;color:#333}
+
+/* TABLES */
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.95rem}
+.data-table th{background:#1a1a2e;color:#fff;padding:.75rem 1rem;text-align:left;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.3px}
+.data-table th:nth-child(n+2){text-align:right}
+.data-table td{padding:.65rem 1rem;border-bottom:1px solid #e8e8e8}
+.data-table td:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums}
+.data-table tr:hover{background:#f9f9f9}
+.data-table .total-row{font-weight:700;border-top:2px solid #1a1a2e;background:#f4f4f4}
+.data-table .savings{color:#2e7d32;font-weight:700}
+.data-table .negative{color:#c62828;font-weight:600}
+.data-table .note{color:#888;font-style:italic;font-weight:400}
+.table-caption{font-size:.85rem;color:#888;font-style:italic;margin-top:-.5rem;margin-bottom:2rem}
+
+/* CALLOUT BOXES */
+.callout{background:#f8f6f0;border-left:4px solid #c8a951;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0}
+.callout p{margin-bottom:.5rem}
+.callout strong{color:#1a1a2e}
+.callout:last-child p{margin-bottom:0}
+
+.callout-green{background:#f0f7f0;border-left:4px solid #2e7d32}
+.callout-red{background:#fef2f2;border-left:4px solid #c62828}
+
+.stat-box{background:#1a1a2e;color:#fff;padding:2rem;border-radius:10px;text-align:center;margin:2rem 0}
+.stat-box .number{font-size:3rem;font-weight:800;color:#c8a951;display:block;margin-bottom:.3rem}
+.stat-box .label{font-size:1rem;color:#ccc}
+
+/* KEY FINDING CARDS */
+.finding-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0 2rem}
+.finding-card{background:#f8f8f8;padding:1.2rem;border-radius:8px;border:1px solid #e8e8e8}
+.finding-card .finding-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:#888;margin-bottom:.3rem}
+.finding-card .finding-value{font-size:1.4rem;font-weight:700;color:#1a1a2e}
+.finding-card .finding-detail{font-size:.85rem;color:#666;margin-top:.3rem}
+
+/* MID-ARTICLE CTA */
+.mid-cta{background:linear-gradient(135deg,#1a1a2e,#2a2a4e);color:#fff;padding:2.5rem;border-radius:12px;text-align:center;margin:3rem 0}
+.mid-cta h3{font-size:1.4rem;margin-bottom:.8rem;color:#fff}
+.mid-cta p{color:#ccc;margin-bottom:1.2rem;font-size:1rem}
+.mid-cta a{display:inline-block;background:#c8a951;color:#1a1a2e;padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:1rem}
+.mid-cta a:hover{background:#b8993f}
+
+/* FOOTER */
+footer{background:#1a1a2e;color:#888;padding:2.5rem 2rem;text-align:center}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
+.footer-links a{color:#888;font-size:.85rem}
+.footer-links a:hover{color:#c8a951}
+footer p{font-size:.8rem}
+footer a{color:#c8a951}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .article-header h1{font-size:1.8rem}
+  .article-header{padding:2rem 1.2rem .5rem}
+  .article-body{padding:1.5rem 1.2rem}
+  .finding-grid{grid-template-columns:1fr}
+  .data-table{font-size:.82rem}
+  .data-table th,.data-table td{padding:.5rem .6rem}
+  .nav-links{gap:.8rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://leavepeo.com/" class="nav-logo">LeavePEO</a>
+  <div class="nav-links">
+    <a href="https://leavepeo.com/#why">Why Leave</a>
+    <a href="https://leavepeo.com/#process">Our Process</a>
+    <a href="https://leavepeo.com/blog">Blog</a>
+    <a href="https://leavepeo.com/about">About</a>
+    <a href="https://leavepeo.com/faq">FAQ</a>
+    <a href="https://leavepeo.com/contact" class="nav-cta">Get Free Analysis</a>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<div class="article-header">
+  <span class="article-tag">Case Study</span>
+  <h1>Inside a Real PEO Exit: How We Found $121,000 in Annual Savings for a 62-Employee Tech Company</h1>
+  <p class="article-subtitle">A forensic walkthrough of an actual PEO exit analysis. Real invoices. Real market quotes. Real numbers. Here's exactly what we found when we took apart a PEO's bundled pricing, line by line.</p>
+  <p class="article-meta">LeavePEO &mdash; IMA Financial Group &nbsp;|&nbsp; March 2026 &nbsp;|&nbsp; 12 min read</p>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+<p>We talk a lot about PEO exit savings in general terms. Companies save $90K-$100K+. Admin fees are too high. Benefits are marked up. You've heard it.</p>
+
+<p>But generalities don't close deals. Numbers do. So here's something we don't usually share: a complete, line-by-line walkthrough of an actual PEO exit analysis we recently completed. The company details have been anonymized, but every dollar figure is real. Every invoice line item is real. Every market quote is real.</p>
+
+<p>This is what it actually looks like when you crack open a PEO's bundled pricing and compare it to the open market.</p>
+
+<h2>The Company</h2>
+
+<p>A 62-employee technology company based in the Northeast with operations in three states (Massachusetts, Connecticut, and California). They'd been with their PEO since early 2024 on a C-Corp structure. Payroll was running semi-monthly. Benefits renewal date: July 1, 2026.</p>
+
+<p>The HR generalist managed day-to-day operations. The CEO made the financial decisions. Neither had run a market comparison since joining the PEO. They came to us because costs kept climbing and they wanted to see the numbers.</p>
+
+<div class="finding-grid">
+  <div class="finding-card">
+    <div class="finding-label">Employees</div>
+    <div class="finding-value">62 on payroll</div>
+    <div class="finding-detail">49 enrolled in benefits, 13 waiving</div>
+  </div>
+  <div class="finding-card">
+    <div class="finding-label">States</div>
+    <div class="finding-value">MA, CT, CA</div>
+    <div class="finding-detail">22, 16, and 12 employees respectively</div>
+  </div>
+  <div class="finding-card">
+    <div class="finding-label">Medical Plans</div>
+    <div class="finding-value">4 options</div>
+    <div class="finding-detail">HDHP, two copay plans, regional HMO</div>
+  </div>
+  <div class="finding-card">
+    <div class="finding-label">PEO Admin Fee</div>
+    <div class="finding-value">$108 PEPM</div>
+    <div class="finding-detail">Per the contract (51-75 employee tier)</div>
+  </div>
+</div>
+
+<h2>Step 1: Pulling Apart the Invoices</h2>
+
+<p>We collected six semi-monthly invoices covering three months (November 2025 through January 2026). Every PEO invoice looks simple at first glance. A list of line items, a total, done. But when you lay six of them side by side and start calculating, patterns emerge.</p>
+
+<p>Here's what the annualized cost structure looked like from the actual invoices:</p>
+
+<table class="data-table">
+  <thead>
+    <tr><th>Invoice Line Item</th><th>6-Period Total</th><th>Annualized</th><th>% of Total</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Gross Wages</td><td>$2,321,047</td><td>$9,284,188</td><td class="note">pass-through</td></tr>
+    <tr><td>SS/Medicare</td><td>$140,645</td><td>$562,579</td><td class="note">pass-through</td></tr>
+    <tr><td>FUTA</td><td>$3,762</td><td>$15,046</td><td class="note">pass-through</td></tr>
+    <tr><td>SUTA</td><td>$21,171</td><td>$84,685</td><td class="note">pass-through</td></tr>
+    <tr><td><strong>Medical</strong></td><td><strong>$204,091</strong></td><td><strong>$816,364</strong></td><td><strong>73.5%</strong></td></tr>
+    <tr><td>Dental</td><td>$13,734</td><td>$54,938</td><td>4.9%</td></tr>
+    <tr><td>Vision</td><td>$1,900</td><td>$7,601</td><td>0.7%</td></tr>
+    <tr><td>Life Insurance</td><td>$4,053</td><td>$16,211</td><td>1.5%</td></tr>
+    <tr><td>LTD Insurance</td><td>$4,532</td><td>$18,129</td><td>1.6%</td></tr>
+    <tr><td><strong>Admin Fee</strong></td><td><strong>$17,760</strong></td><td><strong>$71,040</strong></td><td><strong>6.4%</strong></td></tr>
+    <tr><td>Workers' Comp</td><td>$8,286</td><td>$33,145</td><td>3.0%</td></tr>
+    <tr><td>HSA Contributions</td><td>$8,750</td><td>$35,000</td><td class="note">pass-through</td></tr>
+    <tr><td>401(k)</td><td>$28,061</td><td>$112,242</td><td class="note">pass-through</td></tr>
+    <tr><td>Other (non-cash, wire fees)</td><td>($11,652)</td><td>($46,650)</td><td class="note">adjustments</td></tr>
+    <tr class="total-row"><td>TOTAL INVOICE</td><td>$2,772,957</td><td>$11,091,826</td><td></td></tr>
+  </tbody>
+</table>
+<p class="table-caption">Source: Six actual PEO invoices, annualized (monthly average x 12). Pass-through items exist regardless of PEO status.</p>
+
+<p>The first thing to notice: the vast majority of that $11M invoice is pass-through (wages, payroll taxes, 401k contributions, HSA contributions). Those costs exist whether you're in a PEO or not.</p>
+
+<p><strong>The controllable costs total roughly $1,057,000 per year:</strong> medical ($816K), dental ($55K), vision ($8K), life ($16K), LTD ($18K), admin fee ($71K), workers' comp ($33K), and HSA pass-through ($35K). That's the number we're trying to beat.</p>
+
+<h2>Step 2: The First Red Flag</h2>
+
+<p>Here's where things got interesting. The company also had a benefit rate table from their PEO showing the monthly premium per plan per tier. Standard stuff. We multiplied the rate table rates by the enrollment count to get an expected annual medical cost.</p>
+
+<p>The rate table math said medical should cost <strong>$915,162 per year</strong>.</p>
+<p>The invoices said medical was running at <strong>$816,364 per year</strong>.</p>
+
+<div class="callout">
+  <p><strong>That's a $98,798 gap.</strong> Same company. Same employees. Same plans. Two different numbers depending on which data source you use.</p>
+  <p>This gap exists because PEOs don't bill benefits the same way they're rated. Enrollment fluctuates between pay periods. Pooling adjustments happen behind the scenes. Mid-period changes get reconciled in ways that aren't visible on the rate table.</p>
+  <p>This matters enormously for the savings analysis. If you compare market quotes to the rate table baseline, you get one savings number. If you compare to the invoice baseline, you get a very different (more conservative) number. <strong>We always present both.</strong></p>
+</div>
+
+<h2>Step 3: The Contract Deep Dive</h2>
+
+<p>Before running any market comparison, we read the PEO's Client Service Agreement cover to cover. Here's what we found that mattered:</p>
+
+<ul>
+  <li><strong>Non-renewal notice deadline: May 1, 2026</strong> (for a June 30 term end). Miss this by one day and you're locked in for another full year.</li>
+  <li><strong>Early termination fee:</strong> If you leave mid-term without proper notice, you owe the remaining outsourcing service fees for the rest of the current term. That's potentially $35,000+ in penalties.</li>
+  <li><strong>COBRA obligations:</strong> If the company doesn't secure replacement group health insurance upon exit, they owe the PEO $400/month per former employee maintaining COBRA coverage.</li>
+  <li><strong>Admin fee schedule:</strong> $108/employee/month for 51-75 employees. But the invoiced admin fee averaged $71,040/year, which is $95.48 PEPM. Lower than the contract rate because headcount fluctuated per pay period.</li>
+  <li><strong>Broker commissions:</strong> The PEO's affiliated broker was receiving 5.26% on medical (Cigna) and 10% on dental/vision/life/LTD (Guardian), paid by the carriers. This is separate from the admin fee.</li>
+</ul>
+
+<div class="callout-red callout">
+  <p><strong>The May 1 deadline was 44 days away when we started.</strong> This is not unusual. Most companies that come to us are already inside their notice window. It compresses the timeline but doesn't make it impossible.</p>
+</div>
+
+<h2>Step 4: Going to Market</h2>
+
+<p>We ran a full RFP across every benefit line. Here's what came back.</p>
+
+<h3>Medical: Only One Winner</h3>
+
+<p>We quoted three carriers against the PEO's current Cigna rates:</p>
+
+<table class="data-table">
+  <thead>
+    <tr><th>Carrier</th><th>Annual Premium</th><th>vs. PEO (Invoice)</th><th>vs. PEO (Rated)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Current PEO (invoiced)</td><td>$816,364</td><td>Baseline</td><td></td></tr>
+    <tr><td>Current PEO (rated)</td><td>$915,162</td><td></td><td>Baseline</td></tr>
+    <tr><td class="savings"><strong>BCBS MA (Recommended)</strong></td><td class="savings"><strong>$758,021</strong></td><td class="savings"><strong>-$58,343 (-7.1%)</strong></td><td class="savings"><strong>-$157,141 (-17.2%)</strong></td></tr>
+    <tr><td>Harvard Pilgrim</td><td class="negative">$927,805</td><td class="negative">+$111,441</td><td class="negative">+$12,643</td></tr>
+    <tr><td>Cigna Direct</td><td class="negative">$977,947</td><td class="negative">+$161,583</td><td class="negative">+$62,785</td></tr>
+  </tbody>
+</table>
+
+<p>Two of three carriers were more expensive than the PEO. Only BCBS MA beat it. And Cigna Direct, the company's current carrier accessed outside the PEO, was actually $62,000 to $162,000 MORE expensive. That tells you the PEO's pooled rate wasn't terrible on medical. But BCBS still found a way to beat it by structuring a two-plan strategy (Blue Care Elect Saver + Advantage Blue Preferred Saver) that better fit the employee demographic.</p>
+
+<p>Cigna offered a $20,000 transition credit and $5,000 wellness fund to keep the business. Even with $25,000 in credits, they were still more expensive. We noted it and moved on.</p>
+
+<h3>Ancillary Lines: Mixed Results</h3>
+
+<table class="data-table">
+  <thead>
+    <tr><th>Benefit Line</th><th>Current PEO (Annual)</th><th>Best Market Quote</th><th>Best Carrier</th><th>Savings</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Dental</td><td>$54,938</td><td>$40,040</td><td>Cigna</td><td class="savings">$14,898</td></tr>
+    <tr><td>Vision</td><td>$7,601</td><td>$4,964</td><td>Guardian</td><td class="savings">$2,637</td></tr>
+    <tr><td>Life/AD&D</td><td>$16,211</td><td>$14,650</td><td>Reliance Matrix</td><td class="savings">$1,561</td></tr>
+    <tr><td>LTD</td><td>$18,129</td><td>$11,234</td><td>SunLife</td><td class="savings">$6,895</td></tr>
+    <tr class="total-row"><td>Ancillary Total</td><td>$96,879</td><td>$70,888</td><td></td><td class="savings">$25,991</td></tr>
+  </tbody>
+</table>
+
+<p>We quoted Guardian, Cigna, Standard, MetLife, Reliance Matrix, and SunLife across all ancillary lines. Also asked Mutual of Omaha, Principal, Ameritas, Delta Dental, Hartford, Lincoln, and UNUM. Seven of those came back either uncompetitive or declined to quote. That's normal. You cast a wide net and let the math sort it out.</p>
+
+<h3>The Costs That Didn't Exist Before</h3>
+
+<p>This is the part most people miss when they think about PEO exits. Inside the PEO, certain costs are bundled invisibly into the admin fee or payroll tax lines. When you go standalone, they become separate, visible line items.</p>
+
+<table class="data-table">
+  <thead>
+    <tr><th>New Standalone Cost</th><th>Annual</th><th>Best Carrier</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Short Term Disability</td><td>$4,754</td><td>SunLife</td></tr>
+    <tr><td>Massachusetts Paid Medical/Family Leave</td><td>$10,881</td><td>MetLife</td></tr>
+    <tr><td>HSA Administration</td><td>$3,199</td><td>Cigna/HSA Bank</td></tr>
+    <tr class="total-row"><td>Total New Costs</td><td class="negative">$18,834</td><td></td></tr>
+  </tbody>
+</table>
+
+<p>These aren't new obligations. The company was paying for them inside the PEO. They just weren't visible as separate line items on the invoice. Now they are. And they need to be subtracted from the gross savings to get an honest net number.</p>
+
+<h2>Step 5: The Final Math</h2>
+
+<div class="stat-box">
+  <span class="number">$121,660</span>
+  <span class="label">Net Annual Savings (Conservative Estimate)</span>
+</div>
+
+<p>Here's how it breaks down:</p>
+
+<table class="data-table">
+  <thead>
+    <tr><th>Savings Component</th><th>Annual Impact</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Medical (BCBS MA vs. PEO invoiced cost)</td><td class="savings">+$58,343</td></tr>
+    <tr><td>Admin fee eliminated, replaced by HRIS (~$20 PEPM est.)</td><td class="savings">+$56,160</td></tr>
+    <tr><td>Ancillary lines (dental, vision, life, LTD)</td><td class="savings">+$25,991</td></tr>
+    <tr><td>New standalone costs (STD, MA PFL, HSA admin)</td><td class="negative">-$18,834</td></tr>
+    <tr class="total-row"><td>NET ANNUAL SAVINGS</td><td class="savings">$121,660</td></tr>
+  </tbody>
+</table>
+
+<p>That's the conservative number using the invoice baseline for medical. If we use the rated baseline instead (which is what the PEO's benefit rate table says the company should be paying), the medical savings jump to $157,141 and the total climbs to roughly $220,000.</p>
+
+<p>We presented both numbers to the CEO. The conservative figure as the primary case. The higher figure as realistic upside. We recommended he plan around the $121K and treat anything above it as a bonus.</p>
+
+<div class="callout-green callout">
+  <p><strong>Per employee, that's roughly $1,962 per year in savings.</strong> For context, the industry average for PEO exit savings is $1,500-$2,500 per employee annually. This engagement landed right in the middle of that range.</p>
+</div>
+
+<h2>What Surprised Us</h2>
+
+<p>A few things from this analysis that challenged our own assumptions:</p>
+
+<p><strong>The PEO's medical rate wasn't bad.</strong> Two of three carriers came back more expensive. The PEO's pooled Cigna rate was actually competitive. The savings came from one carrier (BCBS MA) that found a structural advantage through plan design, not because the PEO was dramatically overcharging on medical.</p>
+
+<p><strong>The admin fee was the second biggest savings lever, not the first.</strong> We often lead with "eliminate the admin fee" as the headline savings story. In this case, the admin fee elimination ($56K net after HRIS cost) was nearly as large as the medical savings ($58K). Both mattered.</p>
+
+<p><strong>The "invisible" costs were meaningful.</strong> $18,834 in new standalone costs (STD, state disability, HSA admin) is not a rounding error. If we hadn't accounted for them, we would have overstated savings by 15%. Intellectual honesty matters when you're asking a CEO to make a six-figure decision.</p>
+
+<p><strong>The rate table vs. invoice gap was the biggest analytical landmine.</strong> A $99K difference between two legitimate ways to measure the same company's medical costs. If we'd only used the rate table baseline, we would have told the CEO he was saving $220K. That's probably true, but we can't prove it with the same confidence. Leading with the conservative number and noting the upside is the right way to present it.</p>
+
+<h2>The Timeline</h2>
+
+<p>From first document upload to completed workbook: <strong>about 2 weeks of actual work.</strong></p>
+
+<ul>
+  <li>Week 1: Collected invoices, census, contract, enrollment data. Extracted and verified all numbers.</li>
+  <li>Week 2: Built the comparison workbook, ran the carrier RFP, integrated market quotes.</li>
+  <li>Week 3: Presented findings to the CEO with a 7-slide deck and the full Excel workbook.</li>
+</ul>
+
+<p>The implementation timeline (if approved) is 14 weeks from decision to go-live, targeting the July 1 PEO renewal date. The critical constraint: the non-renewal notice must reach the PEO by May 1.</p>
+
+<!-- MID-ARTICLE CTA -->
+<div class="mid-cta">
+  <h3>Want to See Your Numbers?</h3>
+  <p>Every PEO invoice tells a different story. The only way to know yours is to run the analysis. Free. No obligation. Takes about two weeks.</p>
+  <a href="https://leavepeo.com/contact">Get Your Free Analysis &rarr;</a>
+</div>
+
+<h2>What This Means for Your Company</h2>
+
+<p>Every PEO engagement is different. Your numbers won't look exactly like these. Your PEO might be more or less competitive on medical. Your admin fee might be higher or lower. You might be in one state or ten.</p>
+
+<p>But the methodology is the same every time:</p>
+
+<ol>
+  <li>Pull the invoices apart line by line. Don't trust the summary. Trust the math.</li>
+  <li>Cross-reference the rate table against the invoices. If they don't match, figure out why.</li>
+  <li>Read the contract. Know your deadlines, your penalties, and your obligations.</li>
+  <li>Go to market. Not with one carrier. With all of them. Let the numbers compete.</li>
+  <li>Account for new standalone costs. Be honest about what the PEO was covering that you'll now pay separately.</li>
+  <li>Present both baselines. Don't oversell the savings. Let the CEO decide based on the conservative number with upside noted.</li>
+</ol>
+
+<p>If you're a 40+ employee company in a PEO and you haven't run this analysis, you're making a six-figure decision based on zero data every single year at renewal time. That's not conservative. That's just uninformed.</p>
+
+<p>The analysis itself costs nothing and takes two weeks. The worst-case outcome is you confirm your PEO is a good deal and you stay with confidence. The best-case outcome is you find six figures in annual savings that go straight to your bottom line.</p>
+
+<p>Either way, you'll know.</p>
+
+<!-- FINAL CTA -->
+<div class="mid-cta">
+  <h3>Ready to See What You'd Save?</h3>
+  <p>No cost. No obligation. Just real numbers from your actual invoices, compared to real market quotes. Backed by IMA Financial Group, the 2nd largest independent brokerage in the country.</p>
+  <a href="https://leavepeo.com/contact">Get Your Free Analysis &rarr;</a>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="https://leavepeo.com/">Home</a>
+    <a href="https://leavepeo.com/blog">Blog</a>
+    <a href="https://leavepeo.com/about">About</a>
+    <a href="https://leavepeo.com/faq">FAQ</a>
+    <a href="https://leavepeo.com/contact">Contact</a>
+  </div>
+  <p>&copy; 2026 LeavePEO.com &mdash; A National Practice of <a href="https://imafg.com">IMA Financial Group</a></p>
+  <p style="margin-top:.5rem">Email: <a href="/cdn-cgi/l/email-protection#4c3c2938293e623f393f383e0c25212d2f233e3c622f2321"><span class="
