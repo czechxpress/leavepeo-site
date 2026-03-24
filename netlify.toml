@@ -52,3 +52,11 @@
   from = "/blog-funding-options"
   to = "/blog-funding-options.html"
   status = 200
+[[redirects]]
+  from = "/blog-peo-exit-case-study"
+  to = "/blog-peo-exit-case-study.html"
+  status = 200
+[[redirects]]
+  from = "/blog-insperity-problems"
+  to = "/blog-insperity-problems.html"
+  status = 200
