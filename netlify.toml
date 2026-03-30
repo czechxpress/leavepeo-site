@@ -60,3 +60,8 @@
   from = "/blog-insperity-problems"
   to = "/blog-insperity-problems.html"
   status = 200
+[[redirects]]
+  from = "/blog/peo-invoice-audit"
+  to = "/blog/peo-invoice-audit.html"
+  status = 200
+  force = true
