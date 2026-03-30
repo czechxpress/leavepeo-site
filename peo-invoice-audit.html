@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Numbers to Pull from Your PEO Invoice Before Your Next Renewal | LeavePEO</title>
+  <meta name="description" content="Before you sign another year with your PEO, run these five numbers. What you find may change your decision entirely." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://leavepeo.com/blog/peo-invoice-audit" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="5 Numbers to Pull from Your PEO Invoice Before Your Next Renewal" />
+  <meta property="og:description" content="Before you sign another year with your PEO, run these five numbers. What you find may change your decision entirely." />
+  <meta property="og:url" content="https://leavepeo.com/blog/peo-invoice-audit" />
+  <meta property="og:type" content="article" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2b4a;
+      --navy-light: #243660;
+      --teal: #0e9f8e;
+      --teal-dark: #0b8070;
+      --gold: #c9a84c;
+      --light-bg: #f7f9fc;
+      --text: #2d3748;
+      --text-muted: #718096;
+      --border: #e2e8f0;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    /* ── NAV ── */
+    header {
+      background: var(--navy);
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .nav-brand {
+      font-family: 'Arial', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-brand span { color: var(--teal); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal); }
+
+    .nav-cta {
+      background: var(--teal) !important;
+      color: var(--white) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 4px;
+      font-weight: 700 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--teal-dark) !important; }
+
+    /* ── HERO ── */
+    .post-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+    }
+
+    .post-hero .category-tag {
+      display: inline-block;
+      background: rgba(14, 159, 142, 0.2);
+      color: var(--teal);
+      border: 1px solid rgba(14, 159, 142, 0.4);
+      font-family: 'Arial', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 3px;
+      margin-bottom: 1.2rem;
+    }
+
+    .post-hero h1 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--white);
+      max-width: 760px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.3;
+    }
+
+    .post-hero .subtitle {
+      font-family: 'Arial', sans-serif;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 600px;
+      margin: 0 auto 1.6rem;
+    }
+
+    .post-meta {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── LAYOUT ── */
+    .post-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .post-wrapper { grid-template-columns: 1fr; }
+      .sidebar { order: -1; }
+    }
+
+    /* ── ARTICLE BODY ── */
+    .post-body p {
+      margin-bottom: 1.4rem;
+      color: var(--text);
+    }
+
+    .post-body .intro-para {
+      font-size: 1.08rem;
+      color: #4a5568;
+      border-left: 4px solid var(--teal);
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .number-block {
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--teal);
+      border-radius: 6px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .number-block .number-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+
+    .number-block h2 {
+      font-family: 'Georgia', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.35;
+    }
+
+    .number-block p {
+      margin-bottom: 0.8rem;
+      font-size: 0.97rem;
+    }
+
+    .number-block p:last-child { margin-bottom: 0; }
+
+    .stat-callout {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 5px;
+      padding: 0.9rem 1.2rem;
+      margin: 1rem 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .stat-callout strong { color: var(--teal); }
+
+    .post-body h3 {
+      font-family: 'Georgia', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin: 2.5rem 0 1rem;
+      font-weight: 700;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 88px; }
+
+    .sidebar-card {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .sidebar-card h4 {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.8rem;
+    }
+
+    .sidebar-card p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .sidebar-cta {
+      display: block;
+      background: var(--teal);
+      color: var(--white);
+      text-decoration: none;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-radius: 5px;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+    }
+
+    .sidebar-cta:hover { background: var(--teal-dark); }
+
+    .sidebar-list {
+      list-style: none;
+    }
+
+    .sidebar-list li {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 0.6rem 0;
+    }
+
+    .sidebar-list li:last-child { border-bottom: none; }
+
+    .sidebar-list a {
+      color: rgba(255,255,255,0.78);
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.45;
+      transition: color 0.2s;
+    }
+
+    .sidebar-list a:hover { color: var(--teal); }
+
+    /* ── CTA SECTION ── */
+    .post-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      border-radius: 10px;
+      padding: 2.5rem 2.5rem;
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    .post-cta h3 {
+      font-family: 'Georgia', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .post-cta p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.94rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 520px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.85rem 2.2rem;
+      border-radius: 5px;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+
+    .cta-btn:hover { background: var(--teal-dark); }
+
+    .cta-note {
+      display: block;
+      margin-top: 0.8rem;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    .footer-links {
+      display: flex;
+      gap: 1.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <nav>
+    <a href="/" class="nav-brand">Leave<span>PEO</span></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="nav-cta">Free Consultation</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="post-hero">
+  <div class="category-tag">PEO Cost Analysis</div>
+  <h1>5 Numbers to Pull from Your PEO Invoice Before Your Next Renewal</h1>
+  <p class="subtitle">Most companies renew on autopilot. Run these five calculations before you sign another year.</p>
+  <div class="post-meta">By Peter Lehr &nbsp;|&nbsp; IMA Financial Group &nbsp;|&nbsp; March 2026</div>
+</section>
+
+<!-- BODY -->
+<div class="post-wrapper">
+
+  <article class="post-body">
+
+    <p class="intro-para">
+      Most companies renew their PEO contract because switching feels complicated. That is not a good reason to stay. Before you sign another year, pull these five numbers from your invoice. What you find may change your decision entirely.
+    </p>
+
+    <!-- NUMBER 1 -->
+    <div class="number-block">
+      <div class="number-label">Number 1</div>
+      <h2>Your Effective Administrative Rate as a Percentage of Total Payroll</h2>
+      <p>
+        Your PEO charges either a flat per-employee-per-month (PEPM) fee or a percentage of payroll. Either way, convert it into one clean percentage so you can benchmark it.
+      </p>
+      <p>
+        <strong>The math:</strong> Divide your total annual PEO administrative fees (not including actual insurance premiums or payroll taxes) by your total annual gross payroll. Multiply by 100. That is your effective admin rate.
+      </p>
+      <div class="stat-callout">
+        <strong>Industry range: 3% to 12% of total gross payroll</strong>, with administrative fees typically running $40 to $160 per employee per month. If you are consistently above 8% and you are not in a high-complexity, multi-state environment, you have room to negotiate or a concrete reason to shop.
+      </div>
+      <p>
+        Most business owners have never actually run this number. Their PEO has been happy to keep it that way.
+      </p>
+    </div>
+
+    <!-- NUMBER 2 -->
+    <div class="number-block">
+      <div class="number-label">Number 2</div>
+      <h2>The Markup on Your Health Insurance Premium</h2>
+      <p>
+        This is the number most PEOs least want you to calculate. Ask your PEO for the actual carrier invoice: the document that shows what the insurance company charges at the source. Then compare it to what your PEO is billing you.
+      </p>
+      <p>
+        The gap between those two figures is margin. It is not always disclosed, and there is no legal requirement that it be. Some PEOs bundle insurance costs with hidden administrative markups, making it genuinely difficult to understand how much you are truly paying for healthcare coverage versus how much you are paying the PEO to process it.
+      </p>
+      <div class="stat-callout">
+        Without clear line-item invoices, businesses can unknowingly overspend by <strong>thousands of dollars per year</strong> on health coverage alone. If your PEO cannot or will not produce the underlying carrier invoice, that is your answer.
+      </div>
+    </div>
+
+    <!-- NUMBER 3 -->
+    <div class="number-block">
+      <div class="number-label">Number 3</div>
+      <h2>Your Workers' Comp Rate vs. Your Actual Claims History</h2>
+      <p>
+        Inside a PEO, your workers' compensation is pooled with their entire book of business. That arrangement makes sense when you are small and your own loss history is thin. As your company grows and accumulates clean claims history, the calculus changes.
+      </p>
+      <p>
+        Companies with few or no claims over three-plus years often qualify for standalone workers' comp policies at meaningfully lower rates than they are paying inside the pool. Your PEO has no incentive to tell you this.
+      </p>
+      <div class="stat-callout">
+        <strong>Action step:</strong> Pull your OSHA 300 log and claims history for the past three years. Take that to a standalone workers' comp carrier or a broker who can price it independently. Compare that quote against what you are currently paying inside the PEO. The comparison may surprise you.
+      </div>
+      <p>
+        Low-risk industries including professional services, technology, and financial firms are particularly likely to overpay inside a pooled PEO workers' comp arrangement.
+      </p>
+    </div>
+
+    <!-- NUMBER 4 -->
+    <div class="number-block">
+      <div class="number-label">Number 4</div>
+      <h2>What You Are Paying Per Employee Per Year, All-In</h2>
+      <p>
+        Take your total annual PEO invoice. Subtract the actual pass-through costs at face value: payroll taxes, benefits premiums at their true carrier cost, and any other direct costs that belong to your employees, not your PEO. Divide what remains by your headcount.
+      </p>
+      <p>
+        That is your all-in administrative cost per employee per year.
+      </p>
+      <div class="stat-callout">
+        According to NAPEO, the national average cost of PEO services is approximately <strong>$1,395 per employee per year</strong> in administrative fees. That is the industry average baseline. If your all-in admin number is materially higher and you are not dealing with complex compliance requirements, multi-state payroll, or high-risk industry exposure, you are worth a second opinion.
+      </div>
+      <p>
+        This calculation forces transparency. Most PEO invoices are designed to make this number hard to find. Do the math anyway.
+      </p>
+    </div>
+
+    <!-- NUMBER 5 -->
+    <div class="number-block">
+      <div class="number-label">Number 5</div>
+      <h2>Your Exit Penalty and Renewal Window</h2>
+      <p>
+        Pull your PEO agreement right now and find two things: the exit penalty clause and the renewal notification window.
+      </p>
+      <p>
+        Most PEO contracts include fees for leaving before the contract term ends. The exact amount varies, but it can be substantial. More importantly, most contracts auto-renew, and the window to opt out is typically 30 to 60 days before the anniversary date. Miss that window and you are locked in for another full year regardless of what you discover about your pricing.
+      </p>
+      <div class="stat-callout">
+        <strong>Put the opt-out deadline in your calendar today</strong>, regardless of whether you plan to leave. Knowing your window gives you negotiating leverage even if you ultimately decide to stay. Your PEO's renewal conversation will look different if they know you have done this work.
+      </div>
+    </div>
+
+    <h3>What to Do With These Numbers</h3>
+
+    <p>
+      If any of these figures look off, you are not obligated to sort it out alone. A qualified benefits broker can audit your current PEO arrangement at no cost to you, run side-by-side comparisons against standalone alternatives for benefits, workers' comp, HRIS, and payroll, and tell you plainly whether the math says stay or go.
+    </p>
+
+    <p>
+      At IMA Financial Group, we run PEO exit analyses for companies across the country as part of our national PEO exit practice. No sales pressure. If the analysis says your PEO is the right answer, we will tell you that. But most companies that run these five numbers find at least one area where they are leaving real money on the table.
+    </p>
+
+    <!-- CTA -->
+    <div class="post-cta">
+      <h3>Get a No-Cost PEO Audit</h3>
+      <p>We will run the numbers for you. No obligation. If staying with your PEO is the right call, we will say so.</p>
+      <a href="/contact" class="cta-btn">Schedule Your Free PEO Review</a>
+      <span class="cta-note">Typical turnaround: 5 to 7 business days. No commitment required.</span>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-card">
+      <h4>Ready to Leave Your PEO?</h4>
+      <p>Peter Lehr leads IMA Financial Group's national PEO exit practice. Get a no-cost analysis of your current arrangement.</p>
+      <a href="/contact" class="sidebar-cta">Get a Free Analysis</a>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>Related Posts</h4>
+      <ul class="sidebar-list">
+        <li><a href="/blog/peo-cost-analysis">How to Accurately Calculate What You Are Really Paying Your PEO</a></li>
+        <li><a href="/blog/peo-exit-checklist">The Complete PEO Exit Checklist</a></li>
+        <li><a href="/blog/workers-comp-epli">Workers' Comp and EPLI Outside Your PEO</a></li>
+        <li><a href="/blog/how-to-leave-adp-totalsource">How to Leave ADP TotalSource</a></li>
+        <li><a href="/blog">View All Posts</a></li>
+      </ul>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <p>&copy; 2026 LeavePEO &mdash; A service of IMA Financial Group. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
