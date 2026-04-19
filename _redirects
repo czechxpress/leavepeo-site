@@ -1,9 +1,4 @@
-# LeavePEO.com Netlify Redirects
-# ================================
-# Clean URLs for PEO exit landing pages.
-# Netlify rewrites the path without a visible .html extension.
 
-# PEO Exit Pages (clean URLs)
 /exit-trinet              /exit-trinet.html              200
 /exit-insperity           /exit-insperity.html           200
 /exit-adp-totalsource     /exit-adp-totalsource.html     200
@@ -14,8 +9,6 @@
 /exit-ga-partners         /exit-ga-partners.html         200
 /exit-extensishr          /exit-extensishr.html          200
 /exit-coadvantage         /exit-coadvantage.html         200
-
-# Existing page rewrites (preserve these if already in your _redirects file)
 /contact                  /contact.html                  200
 /about                    /about.html                    200
 /faq                      /faq.html                      200
