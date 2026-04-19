@@ -287,6 +287,22 @@ nav.scrolled { box-shadow:0 2px 20px rgba(0,0,0,0.06); }
   font-size:0.88rem; color:var(--dark-text); font-weight:500;
 }
 
+/* ===== SUBMITTED MESSAGE ===== */
+.submitted-banner {
+  max-width:780px; margin:0 auto 2rem;
+  background:var(--sage); color:white;
+  border-radius:12px; padding:1.5rem 2rem;
+  display:none;
+}
+.submitted-banner.show { display:block; }
+.submitted-banner h3 {
+  font-family:'Source Serif 4',serif; font-size:1.25rem;
+  font-weight:700; margin-bottom:0.4rem;
+}
+.submitted-banner p {
+  font-size:0.92rem; color:rgba(255,255,255,0.85); line-height:1.55;
+}
+
 /* ===== FOOTER ===== */
 footer {
   padding:3.5rem 5% 2.5rem; background:var(--charcoal); color:rgba(255,255,255,0.5);
@@ -369,6 +385,13 @@ footer {
 
 <!-- ===== CONTACT SECTION ===== -->
 <section class="contact-section">
+
+  <!-- Submission confirmation banner (shows when ?submitted=true is in URL) -->
+  <div class="submitted-banner" id="submittedBanner">
+    <h3>Thanks. We got your request.</h3>
+    <p>We'll review your information and reach out within one business day to start your PEO exit analysis.</p>
+  </div>
+
   <div class="contact-grid">
 
     <!-- FORM -->
@@ -376,16 +399,10 @@ footer {
       <h2>Request Your Free Analysis</h2>
       <p class="form-sub">Fill out the form below and we'll reach out within one business day to get started on your PEO exit analysis.</p>
 
-      <!-- 
-        FORM SETUP INSTRUCTIONS:
-        1. Go to https://formspree.io and create a free account
-        2. Create a new form — it will give you a form ID like "xyzabcde"
-        3. Replace https://formspree.io/f/xdayzwlz below with your actual ID
-        4. Submissions will go directly to peter.sustr@imacorp.com
-      -->
-      <form action="https://formspree.io/f/https://formspree.io/f/xdayzwlz" method="POST">
+      <form action="https://formspree.io/f/xdayzwlz" method="POST">
       <input type="hidden" name="_subject" value="New PEO Exit Analysis Request — LeavePEO.com">
       <input type="hidden" name="_next" value="https://leavepeo.com/contact?submitted=true">
+      <input type="hidden" name="source" value="contact-page">
 
       <div class="form-row">
         <div class="form-group">
@@ -432,9 +449,13 @@ footer {
             <option value="adp">ADP TotalSource</option>
             <option value="trinet">TriNet</option>
             <option value="insperity">Insperity</option>
-            <option value="engage">Engage</option>
+            <option value="paychex">Paychex</option>
             <option value="justworks">Justworks</option>
             <option value="rippling">Rippling</option>
+            <option value="engage">Engage</option>
+            <option value="ga-partners">G&amp;A Partners</option>
+            <option value="extensishr">ExtensisHR</option>
+            <option value="coadvantage">CoAdvantage</option>
             <option value="other">Other</option>
             <option value="unsure">Not sure</option>
           </select>
@@ -445,6 +466,9 @@ footer {
         <label for="notes">Anything else we should know? <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--light-text);">(optional)</span></label>
         <textarea id="notes" name="notes" placeholder="Tell us about your situation — renewal date, what's driving the interest, specific concerns..."></textarea>
       </div>
+
+      <!-- Honeypot field for spam prevention (hidden from real users) -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
       <button class="submit-btn" type="submit">Get My Free Analysis →</button>
       </form>
@@ -460,7 +484,7 @@ footer {
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <h3>Prefer to talk first?</h3>
-        <p>Send us a quick email and we'll set up a free 15-minute call. No preparation needed — we'll walk through your situation and tell you if a full analysis makes sense.</p>
+        <p>Book a free 15-minute call directly. No preparation needed. We'll walk through your situation and tell you if a full analysis makes sense.</p>
         <a href="https://calendly.com/petersustr/new-meeting" target="_blank" rel="noopener" class="book-btn">Book a 15-Minute Call →</a>
       </div>
 
@@ -470,19 +494,19 @@ footer {
         <ol class="expect-list">
           <li>
             <div class="expect-num">1</div>
-            <div class="expect-text"><strong>We reach out</strong> — within one business day to discuss your situation and collect your PEO invoices and census data.</div>
+            <div class="expect-text"><strong>We reach out</strong> within one business day to discuss your situation and collect your PEO invoices and census data.</div>
           </li>
           <li>
             <div class="expect-num">2</div>
-            <div class="expect-text"><strong>We run the analysis</strong> — extracting every cost line, mapping your census, and running a full market RFP in 1–2 weeks.</div>
+            <div class="expect-text"><strong>We run the analysis</strong> by extracting every cost line, mapping your census, and running a full market RFP in 1 to 2 weeks.</div>
           </li>
           <li>
             <div class="expect-num">3</div>
-            <div class="expect-text"><strong>We present the numbers</strong> — a comprehensive workbook showing exactly what you pay now vs. what the market offers.</div>
+            <div class="expect-text"><strong>We present the numbers</strong> in a comprehensive workbook showing exactly what you pay now versus what the market offers.</div>
           </li>
           <li>
             <div class="expect-num">4</div>
-            <div class="expect-text"><strong>You decide</strong> — no pressure. If the numbers make sense, we manage the entire transition. If not, you keep the data.</div>
+            <div class="expect-text"><strong>You decide.</strong> No pressure. If the numbers make sense, we manage the entire transition. If not, you keep the data.</div>
           </li>
         </ol>
       </div>
@@ -504,11 +528,11 @@ footer {
           </div>
           <div class="trust-item">
             <svg class="trust-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>$90K–$100K+ average annual savings</span>
+            <span>100% free analysis, no obligation</span>
           </div>
           <div class="trust-item">
             <svg class="trust-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>100% free analysis, no obligation</span>
+            <span>We're paid by carriers, never by you</span>
           </div>
         </div>
       </div>
@@ -538,14 +562,11 @@ footer {
     <div class="footer-col">
       <h4>Resources</h4>
       <a href="/blog-peo-exit-checklist">PEO Exit Checklist</a>
-      <a href="#">Cost Calculator</a>
       <a href="/blog">Blog</a>
-      <a href="#">Case Studies</a>
     </div>
     <div class="footer-col">
       <h4>Connect</h4>
-      <a href="#">LinkedIn</a>
-      <a href="/cdn-cgi/l/email-protection#f18194859483df8284828583b1989c90929e8381df929e9c"><span class="__cf_email__" data-cfemail="e79782938295c99492949395a78e8a8684889597c984888a">[email&#160;protected]</span></a>
+      <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a>
       <a href="https://calendly.com/petersustr/new-meeting" target="_blank" rel="noopener">Schedule a Call</a>
     </div>
   </div>
@@ -555,11 +576,13 @@ footer {
 </footer>
 
 <!-- ===== SCRIPTS ===== -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+// Nav scroll effect
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
 });
 
+// Animate elements on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -567,6 +590,20 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+// Show submission confirmation if ?submitted=true is in URL
+if (window.location.search.indexOf('submitted=true') !== -1) {
+  document.getElementById('submittedBanner').classList.add('show');
+  // Scroll to the banner
+  document.getElementById('submittedBanner').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Fire GA event for form submission
+  if (typeof gtag === 'function') {
+    gtag('event', 'form_submission', {
+      'event_category': 'lead_generation',
+      'event_label': 'contact_page'
+    });
+  }
+}
 </script>
 </body>
 </html>
