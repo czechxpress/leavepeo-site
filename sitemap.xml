@@ -98,5 +98,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
+<url>
+  <loc>https://leavepeo.com/blog-peo-ertc-fine-print</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
