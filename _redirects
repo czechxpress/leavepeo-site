@@ -1,18 +1,38 @@
+# Pretty-URL rewrites (200 = keep URL in browser, serve .html)
+/about                                            /about.html                                            200
+/contact                                          /contact.html                                          200
+/faq                                              /faq.html                                              200
+/blog                                             /blog.html                                             200
 
-/exit-trinet              /exit-trinet.html              200
-/exit-insperity           /exit-insperity.html           200
-/exit-adp-totalsource     /exit-adp-totalsource.html     200
-/exit-paychex             /exit-paychex.html             200
-/exit-justworks           /exit-justworks.html           200
-/exit-rippling            /exit-rippling.html            200
-/exit-engage              /exit-engage.html              200
-/exit-ga-partners         /exit-ga-partners.html         200
-/exit-extensishr          /exit-extensishr.html          200
-/exit-coadvantage         /exit-coadvantage.html         200
-/contact                  /contact.html                  200
-/about                    /about.html                    200
-/faq                      /faq.html                      200
-/blog                     /blog.html                     200
+# Exit landing pages
+/exit-trinet                                      /exit-trinet.html                                      200
+/exit-insperity                                   /exit-insperity.html                                   200
+/exit-paychex                                     /exit-paychex.html                                     200
+/exit-adp-totalsource                             /exit-adp-totalsource.html                             200
+/exit-justworks                                   /exit-justworks.html                                   200
+/exit-rippling                                    /exit-rippling.html                                    200
+/exit-engage                                      /exit-engage.html                                      200
+/exit-ga-partners                                 /exit-ga-partners.html                                 200
+/exit-extensishr                                  /exit-extensishr.html                                  200
+/exit-coadvantage                                 /exit-coadvantage.html                                 200
+
+# Blog posts
+/blog-cost-of-staying                             /blog-cost-of-staying.html                             200
+/blog-leave-adp-totalsource                       /blog-leave-adp-totalsource.html                       200
+/blog-peo-exit-checklist                          /blog-peo-exit-checklist.html                          200
+/blog-workers-comp-epli                           /blog-workers-comp-epli.html                           200
+/blog-401k-transition                             /blog-401k-transition.html                             200
+/blog-peo-tax-credits                             /blog-peo-tax-credits.html                             200
+/blog-funding-options                             /blog-funding-options.html                             200
+/blog-peo-exit-case-study                         /blog-peo-exit-case-study.html                         200
+/blog-insperity-problems                          /blog-insperity-problems.html                          200
+/blog-peo-ertc-fine-print                         /blog-peo-ertc-fine-print.html                         200
+/blog-q4-renewal-trap                             /blog-q4-renewal-trap.html                             200
+/blog-multi-state-tax-registration-sequence       /blog-multi-state-tax-registration-sequence.html       200
+/peo-invoice-audit                                /peo-invoice-audit.html                                200
+
+# Legacy URL pattern: blog/peo-invoice-audit -> root file
+/blog/peo-invoice-audit                           /peo-invoice-audit.html                                200
 
 # Catch-all 404 (must be last)
-/*                        /404.html                      404
+/*                                                /404.html                                              404
