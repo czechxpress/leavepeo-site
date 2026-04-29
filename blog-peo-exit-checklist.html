@@ -64,7 +64,10 @@
             --gold-hover: #b8954d;
             --rust: #B85C3A;
             --white: #FFFFFF;
-        }
+  --navy: #1F2D3D;
+  --navy-hover: #2A3D52;
+  --gold-hover: #B89A52;
+}
         body {
             font-family: 'Inter', -apple-system, sans-serif;
             background: var(--cream);
@@ -99,15 +102,13 @@
             font-weight: 500;
         }
         .nav-links a:hover { color: var(--sage); }
-        .nav-cta {
-            background: var(--gold) !important;
-            color: var(--charcoal) !important;
+        .nav-cta { background: var(--navy) !important; color: var(--white) !important;
             padding: 0.6rem 1.2rem;
             border-radius: 6px;
             font-weight: 600 !important;
             transition: background 0.2s;
         }
-        .nav-cta:hover { background: var(--gold-hover) !important; }
+        .nav-cta:hover { background: var(--navy-hover) !important; }
 
         .blog-hero {
             max-width: 800px;
@@ -278,15 +279,14 @@
         }
         .mid-cta a {
             display: inline-block;
-            background: var(--gold);
-            color: var(--charcoal);
+            background: var(--navy); color: var(--white);
             padding: 0.8rem 2rem;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             transition: background 0.2s;
         }
-        .mid-cta a:hover { background: var(--gold-hover); }
+        .mid-cta a:hover { background: var(--navy-hover); }
 
         /* PARALLEL PHASES */
         .parallel-wrapper {
