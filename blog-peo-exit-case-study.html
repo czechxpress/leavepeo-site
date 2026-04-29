@@ -1,107 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F51MZYJYMK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F51MZYJYMK');
+</script>
+
 <meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%235B7B6A%27/%3E%3Ctext x=%278%27 y=%2724%27 font-family=%27Georgia,serif%27 font-weight=%27bold%27 font-size=%2722%27 fill=%27%23F5F0EB%27%3EL%3C/text%3E%3Ctext x=%2717%27 y=%2724%27 font-family=%27Georgia,serif%27 font-weight=%27bold%27 font-size=%2722%27 fill=%27%23C9A96E%27%3EP%3C/text%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inside a Real PEO Exit: How We Found $121K in Annual Savings for a 62-Employee Tech Company | LeavePEO.com</title>
 <meta name="description" content="A line-by-line forensic walkthrough of an actual PEO exit analysis. Real invoices, real market quotes, real savings. See exactly how we took apart a PEO's bundled pricing and found $121,000 in annual savings.">
-<meta name="keywords" content="PEO exit case study, PEO exit savings, PEO invoice analysis, leave PEO example, PEO cost analysis, PEO exit process">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://leavepeo.com/blog-peo-exit-case-study">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F51MZYJYMK"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F51MZYJYMK');</script>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leavepeo.com/blog-peo-exit-case-study">
+<meta property="og:title" content="Inside a Real PEO Exit: How We Found $121K in Annual Savings for a 62-Employee Tech Company | LeavePEO.com">
+<meta property="og:description" content="A line-by-line forensic walkthrough of an actual PEO exit analysis. Real invoices, real market quotes, real savings. See exactly how we took apart a PEO's bundled pricing and found $121,000 in annual savings.">
+<meta property="og:site_name" content="LeavePEO.com">
+
+<!-- Preconnect -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',-apple-system,sans-serif;color:#1F2D3D;line-height:1.7;background:#fff}
-a{color:#C9A96E;text-decoration:none;transition:color .2s}
-a:hover{color:#B89A52}
-
-/* NAV */
-nav{background:#1F2D3D;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.3)}
-.nav-logo{font-size:1.4rem;font-weight:700;color:#C9A96E;letter-spacing:1px}
-.nav-links{display:flex;gap:1.5rem;align-items:center}
-.nav-links a{color:#ccc;font-size:.9rem;transition:color .2s}
-.nav-links a:hover{color:#C9A96E}
-.nav-cta{background:#C9A96E;color:#1F2D3D !important;padding:.5rem 1.2rem;border-radius:6px;font-weight:600;font-size:.85rem}
-.nav-cta:hover{background:#B89A52}
-
-/* ARTICLE */
-.article-header{max-width:800px;margin:0 auto;padding:3rem 2rem 1rem}
-.article-tag{display:inline-block;background:#ECE5D9;color:#5B7B6A;padding:.3rem .8rem;border-radius:4px;font-size:.8rem;font-weight:600;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.5px}
-.article-header h1{font-size:2.4rem;line-height:1.2;color:#1F2D3D;margin-bottom:1rem;font-weight:800}
-.article-subtitle{font-size:1.15rem;color:#555;margin-bottom:1.5rem;line-height:1.6}
-.article-meta{font-size:.85rem;color:#888;padding-bottom:1.5rem;border-bottom:1px solid #e5e5e5}
-
-.article-body{max-width:800px;margin:0 auto;padding:2rem}
-.article-body p{margin-bottom:1.4rem;font-size:1.05rem;color:#333}
-.article-body h2{font-size:1.6rem;color:#1F2D3D;margin:2.5rem 0 1rem;font-weight:700;padding-top:1rem}
-.article-body h3{font-size:1.25rem;color:#1F2D3D;margin:2rem 0 .8rem;font-weight:600}
-.article-body strong{color:#1F2D3D}
-.article-body ul,.article-body ol{margin:1rem 0 1.5rem 1.5rem}
-.article-body li{margin-bottom:.5rem;font-size:1.05rem;color:#333}
-
-/* TABLES */
-.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.95rem}
-.data-table th{background:#1F2D3D;color:#fff;padding:.75rem 1rem;text-align:left;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.3px}
-.data-table th:nth-child(n+2){text-align:right}
-.data-table td{padding:.65rem 1rem;border-bottom:1px solid #e8e8e8}
-.data-table td:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums}
-.data-table tr:hover{background:#f9f9f9}
-.data-table .total-row{font-weight:700;border-top:2px solid #1F2D3D;background:#f4f4f4}
-.data-table .savings{color:#2e7d32;font-weight:700}
-.data-table .negative{color:#c62828;font-weight:600}
-.data-table .note{color:#888;font-style:italic;font-weight:400}
-.table-caption{font-size:.85rem;color:#888;font-style:italic;margin-top:-.5rem;margin-bottom:2rem}
-
-/* CALLOUT BOXES */
-.callout{background:#f8f6f0;border-left:4px solid #C9A96E;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0}
-.callout p{margin-bottom:.5rem}
-.callout strong{color:#1F2D3D}
-.callout:last-child p{margin-bottom:0}
-
-.callout-green{background:#f0f7f0;border-left:4px solid #2e7d32}
-.callout-red{background:#fef2f2;border-left:4px solid #c62828}
-
-.stat-box{background:#1F2D3D;color:#fff;padding:2rem;border-radius:10px;text-align:center;margin:2rem 0}
-.stat-box .number{font-size:3rem;font-weight:800;color:#C9A96E;display:block;margin-bottom:.3rem}
-.stat-box .label{font-size:1rem;color:#ccc}
-
-/* KEY FINDING CARDS */
-.finding-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0 2rem}
-.finding-card{background:#f8f8f8;padding:1.2rem;border-radius:8px;border:1px solid #e8e8e8}
-.finding-card .finding-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:#888;margin-bottom:.3rem}
-.finding-card .finding-value{font-size:1.4rem;font-weight:700;color:#1F2D3D}
-.finding-card .finding-detail{font-size:.85rem;color:#666;margin-top:.3rem}
-
-/* MID-ARTICLE CTA */
-.mid-cta{background:linear-gradient(135deg,#1F2D3D,#2a2a4e);color:#fff;padding:2.5rem;border-radius:12px;text-align:center;margin:3rem 0}
-.mid-cta h3{font-size:1.4rem;margin-bottom:.8rem;color:#fff}
-.mid-cta p{color:#ccc;margin-bottom:1.2rem;font-size:1rem}
-.mid-cta a{display:inline-block;background:#C9A96E;color:#1F2D3D;padding:.75rem 2rem;border-radius:8px;font-weight:700;font-size:1rem}
-.mid-cta a:hover{background:#B89A52}
-
-/* FOOTER */
-footer{background:#1F2D3D;color:#888;padding:2.5rem 2rem;text-align:center}
-.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
-.footer-links a{color:#888;font-size:.85rem}
-.footer-links a:hover{color:#C9A96E}
-footer p{font-size:.8rem}
-footer a{color:#C9A96E}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .article-header h1{font-size:1.8rem}
-  .article-header{padding:2rem 1.2rem .5rem}
-  .article-body{padding:1.5rem 1.2rem}
-  .finding-grid{grid-template-columns:1fr}
-  .data-table{font-size:.82rem}
-  .data-table th,.data-table td{padding:.5rem .6rem}
-  .nav-links{gap:.8rem}
+:root {
+  --cream: #F5F0EB;
+  --cream-dark: #EFE8DB;
+  --warm-gray: #DCD5C9;
+  --sage: #5B7B6A;
+  --sage-light: #739987;
+  --sage-dim: rgba(91,123,106,0.10);
+  --charcoal: #2C2C2C;
+  --dark-text: #2C2C2C;
+  --mid-text: #4B5563;
+  --light-text: #6B7280;
+  --rust: #B85C3A;
+  --gold: #C9A96E;
+  --white: #FFFFFF;
+  --navy: #1F2D3D;
+  --navy-hover: #2A3D52;
+  --gold-hover: #B89A52;
 }
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Inter',-apple-system,sans-serif; background:var(--cream); color:var(--dark-text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+/* ===== NAV ===== */
+nav {
+  position:fixed; top:0; width:100%; z-index:100;
+  padding:0.9rem 5%;
+  display:flex; justify-content:space-between; align-items:center;
+  background:rgba(245,240,235,0.94); backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(91,123,106,0.08);
+  transition:box-shadow 0.3s;
+}
+nav.scrolled { box-shadow:0 2px 20px rgba(0,0,0,0.06); }
+.logo { font-family:'Source Serif 4',serif; font-size:1.5rem; font-weight:800; color:var(--charcoal); letter-spacing:-0.5px; text-decoration:none; }
+.logo span { color:var(--sage); }
+.nav-links { display:flex; gap:2rem; align-items:center; }
+.nav-links a { color:var(--mid-text); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.3s; }
+.nav-links a:hover { color:var(--sage); }
+.nav-links a.active { color:var(--sage); font-weight:600; }
+.mobile-toggle { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; }
+.mobile-toggle span { display:block; width:22px; height:2px; background:var(--charcoal); margin:5px 0; transition:0.3s; }
+
+.btn {
+  padding:0.7rem 1.6rem; border-radius:8px;
+  font-weight:600; font-size:0.88rem; cursor:pointer;
+  transition:all 0.3s ease; text-decoration:none;
+  display:inline-flex; align-items:center; gap:0.5rem; border:none;
+  font-family:'Inter',-apple-system,sans-serif;
+}
+.btn-primary { background:var(--navy); color:var(--white); }
+.btn-primary:hover { background:var(--navy-hover); transform:translateY(-2px); box-shadow:0 8px 24px rgba(31,45,61,0.25); }
+
+/* ===== PAGE HERO ===== */
+.page-hero {
+  padding:8.5rem 5% 3.5rem; position:relative; overflow:hidden;
+  background:var(--white);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.page-hero::before {
+  content:''; position:absolute; top:-30%; right:-15%;
+  width:600px; height:600px;
+  background:radial-gradient(circle,rgba(91,123,106,0.06) 0%,transparent 60%);
+  border-radius:50%;
+}
+.page-hero-inner {
+  max-width:800px; margin:0 auto; text-align:center;
+  position:relative; z-index:2;
+}
+.hero-eyebrow {
+  font-size:0.78rem; font-weight:600; letter-spacing:1.5px;
+  text-transform:uppercase; color:var(--sage);
+  margin-bottom:1.25rem;
+}
+.hero-eyebrow::before { content:'— '; }
+.hero-eyebrow::after { content:' —'; }
+.page-hero h1 {
+  font-family:'Source Serif 4',serif;
+  font-size:3rem; line-height:1.12; font-weight:800;
+  color:var(--charcoal); letter-spacing:-1px;
+  margin-bottom:1.25rem;
+}
+.page-hero h1 em { font-style:italic; color:var(--sage); }
+.hero-sub {
+  font-size:1.1rem; color:var(--mid-text); line-height:1.7;
+  max-width:560px; margin:0 auto;
+}
+
+/* ===== CONTACT LAYOUT ===== */
+.contact-section {
+  padding:4rem 5% 5rem;
+  background:var(--cream);
+}
+.contact-grid {
+  display:grid; grid-template-columns:1.1fr 0.9fr;
+  gap:3.5rem; max-width:1050px; margin:0 auto;
+  align-items:start;
+}
+
+/* ===== FORM ===== */
+.form-card {
+  background:white; border-radius:16px;
+  padding:2.5rem; border:1px solid rgba(0,0,0,0.04);
+  box-shadow:0 4px 20px rgba(0,0,0,0.04);
+}
+.form-card h2 {
+  font-family:'Source Serif 4',serif; font-size:1.5rem;
+  font-weight:700; color:var(--charcoal); margin-bottom:0.5rem;
+}
+.form-card .form-sub {
+  font-size:0.88rem; color:var(--mid-text); line-height:1.6;
+  margin-bottom:2rem;
+}
+.form-row {
+  display:grid; grid-template-columns:1fr 1fr; gap:1rem;
+  margin-bottom:1rem;
+}
+.form-group { margin-bottom:1rem; }
+.form-group label {
+  display:block; font-size:0.78rem; font-weight:600;
+  color:var(--dark-text); margin-bottom:0.4rem;
+  text-transform:uppercase; letter-spacing:0.5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%; padding:0.75rem 1rem;
+  border:1.5px solid var(--warm-gray);
+  border-radius:8px; font-family:'Inter',-apple-system,sans-serif;
+  font-size:0.9rem; color:var(--dark-text);
+  background:var(--cream); transition:all 0.3s;
+  outline:none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color:var(--sage);
+  box-shadow:0 0 0 3px rgba(91,123,106,0.1);
+  background:white;
+}
+.form-group textarea {
+  resize:vertical; min-height:100px;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color:var(--light-text);
+}
+.form-group select {
+  appearance:none; cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%238A8A9A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 1rem center;
+  padding-right:2.5rem;
+}
+
+.submit-btn {
+  width:100%; padding:0.9rem;
+  background:var(--gold); color:var(--charcoal);
+  border:none; border-radius:8px;
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:0.95rem; font-weight:600;
+  cursor:pointer; transition:all 0.3s;
+  margin-top:0.5rem;
+}
+.submit-btn:hover {
+  background:#B89A52;
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(31,45,61,0.25);
+}
+.form-note {
+  text-align:center; margin-top:1rem;
+  font-size:0.78rem; color:var(--light-text);
+}
+
+/* ===== SIDEBAR ===== */
+.contact-sidebar {
+  display:flex; flex-direction:column; gap:1.5rem;
+}
+
+.sidebar-card {
+  background:white; border-radius:14px;
+  padding:2rem; border:1px solid rgba(0,0,0,0.04);
+  box-shadow:0 2px 10px rgba(0,0,0,0.03);
+}
+
+.book-card {
+  background:var(--charcoal); color:white;
+  text-align:center;
+}
+.book-card .book-icon {
+  width:56px; height:56px; border-radius:14px;
+  background:rgba(255,255,255,0.1);
+  display:inline-flex; align-items:center; justify-content:center;
+  margin-bottom:1.25rem;
+  color:var(--sage-light);
+}
+.book-card h3 {
+  font-family:'Source Serif 4',serif; font-size:1.25rem;
+  font-weight:700; margin-bottom:0.5rem;
+}
+.book-card p {
+  font-size:0.88rem; color:rgba(255,255,255,0.6);
+  line-height:1.6; margin-bottom:1.5rem;
+}
+.book-btn {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  padding:0.8rem 2rem; border-radius:8px;
+  background:var(--gold); color:var(--charcoal);
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:0.9rem; font-weight:600;
+  text-decoration:none; transition:all 0.3s;
+  border:none; cursor:pointer;
+}
+.book-btn:hover {
+  background:#B89A52;
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(31,45,61,0.25);
+}
+
+.expect-card h3 {
+  font-family:'Source Serif 4',serif; font-size:1.15rem;
+  font-weight:700; color:var(--charcoal); margin-bottom:1.25rem;
+}
+.expect-list {
+  list-style:none; display:flex; flex-direction:column; gap:1rem;
+}
+.expect-list li {
+  display:flex; gap:0.75rem; align-items:flex-start;
+}
+.expect-num {
+  width:28px; height:28px; border-radius:50%;
+  background:var(--sage-dim); color:var(--sage);
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.72rem; font-weight:700; flex-shrink:0;
+  margin-top:0.1rem;
+}
+.expect-text {
+  font-size:0.88rem; color:var(--mid-text); line-height:1.55;
+}
+.expect-text strong {
+  color:var(--dark-text); font-weight:600;
+}
+
+.trust-card {
+  background:var(--sage-dim); border:none;
+}
+.trust-card .trust-items {
+  display:flex; flex-direction:column; gap:0.75rem;
+}
+.trust-item {
+  display:flex; align-items:center; gap:0.75rem;
+}
+.trust-check {
+  color:var(--sage); flex-shrink:0;
+}
+.trust-item span {
+  font-size:0.88rem; color:var(--dark-text); font-weight:500;
+}
+
+/* ===== SUBMITTED MESSAGE ===== */
+.submitted-banner {
+  max-width:780px; margin:0 auto 2rem;
+  background:var(--sage); color:white;
+  border-radius:12px; padding:1.5rem 2rem;
+  display:none;
+}
+.submitted-banner.show { display:block; }
+.submitted-banner h3 {
+  font-family:'Source Serif 4',serif; font-size:1.25rem;
+  font-weight:700; margin-bottom:0.4rem;
+}
+.submitted-banner p {
+  font-size:0.92rem; color:rgba(255,255,255,0.85); line-height:1.55;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding:3.5rem 5% 2.5rem; background:var(--charcoal); color:rgba(255,255,255,0.5);
+}
+.footer-grid {
+  display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:3rem; max-width:1200px; margin:0 auto 2.5rem;
+}
+.footer-brand .logo { margin-bottom:1rem; }
+.footer-brand .logo span { color:var(--sage-light); }
+.footer-brand p { font-size:0.85rem; line-height:1.6; color:rgba(255,255,255,0.4); max-width:280px; }
+.footer-col h4 {
+  font-size:0.75rem; text-transform:uppercase; letter-spacing:1.5px;
+  color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:1rem;
+}
+.footer-col a {
+  display:block; color:rgba(255,255,255,0.55); text-decoration:none;
+  font-size:0.88rem; padding:0.3rem 0; transition:color 0.3s;
+}
+.footer-col a:hover { color:var(--sage-light); }
+.footer-bottom {
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding-top:2rem; text-align:center;
+  font-size:0.78rem; max-width:1200px; margin:0 auto;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease-out, transform 0.6s ease-out; }
+.animate.visible { opacity:1; transform:translateY(0); }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px) {
+  .nav-links { display:none; }
+  .mobile-toggle { display:block; }
+  nav.open .nav-links {
+    display:flex; flex-direction:column;
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--cream); padding:1.5rem 5%;
+    border-bottom:1px solid var(--warm-gray); gap:1rem;
+  }
+  .page-hero { padding-top:7rem; padding-bottom:2.5rem; }
+  .page-hero h1 { font-size:2.2rem; }
+  .contact-section { padding:2.5rem 5% 3.5rem; }
+  .contact-grid { grid-template-columns:1fr; gap:2rem; }
+  .form-row { grid-template-columns:1fr; }
+  .form-card { padding:1.75rem; }
+  .footer-grid { grid-template-columns:1fr; gap:2rem; }
+}
+
+/* ===== ARTICLE LAYOUT ===== */
+.article-wrap { max-width:780px; margin:0 auto; padding:1rem 5% 3rem; }
+.article-header { padding:6rem 5% 2rem; max-width:780px; margin:0 auto; text-align:center; }
+.article-tag {
+  display:inline-block;
+  background:var(--sage-dim); color:var(--sage);
+  font-size:0.72rem; font-weight:600; letter-spacing:1px;
+  text-transform:uppercase;
+  padding:0.35rem 0.85rem; border-radius:4px;
+  margin-bottom:1.25rem;
+}
+.article-header h1 {
+  font-family:'Source Serif 4',serif;
+  font-size:2.4rem; line-height:1.15; font-weight:800;
+  color:var(--charcoal); letter-spacing:-0.5px;
+  margin-bottom:1rem;
+}
+.article-subtitle {
+  font-size:1.1rem; color:var(--mid-text); line-height:1.65;
+  max-width:680px; margin:0 auto 1rem;
+}
+.article-meta {
+  font-size:0.85rem; color:var(--light-text);
+  letter-spacing:0.3px;
+}
+.article-body { font-size:1rem; color:var(--dark-text); line-height:1.8; }
+.article-body h2 {
+  font-family:'Source Serif 4',serif;
+  font-size:1.6rem; font-weight:700; color:var(--charcoal);
+  margin:2.75rem 0 1rem; letter-spacing:-0.3px;
+}
+.article-body h3 {
+  font-family:'Source Serif 4',serif;
+  font-size:1.2rem; font-weight:700; color:var(--charcoal);
+  margin:2rem 0 0.85rem;
+}
+.article-body p { margin-bottom:1.25rem; }
+.article-body strong { color:var(--charcoal); }
+.article-body a { color:var(--sage); text-decoration:underline; text-decoration-color:rgba(91,123,106,0.3); text-underline-offset:3px; }
+.article-body a:hover { color:var(--charcoal); text-decoration-color:var(--sage); }
+.article-body ul, .article-body ol { margin:0 0 1.5rem 1.5rem; }
+.article-body li { margin-bottom:0.5rem; }
+.callout {
+  background:var(--white); border:1px solid var(--sage-dim); border-left:4px solid var(--sage);
+  padding:1.25rem 1.5rem; margin:1.75rem 0; border-radius:0 10px 10px 0;
+}
+.callout p:last-child { margin-bottom:0; }
+.callout.warning { border-left-color:var(--rust); }
+.mid-cta {
+  background:var(--charcoal); color:var(--white);
+  border-radius:14px; padding:2.5rem; text-align:center; margin:3rem 0;
+}
+.mid-cta h3 {
+  font-family:'Source Serif 4',serif; color:var(--white) !important;
+  font-size:1.4rem; margin-bottom:0.6rem !important;
+}
+.mid-cta p {
+  color:rgba(255,255,255,0.78) !important;
+  margin-bottom:1.5rem !important;
+}
+.mid-cta a {
+  display:inline-block; background:var(--gold); color:var(--charcoal) !important;
+  padding:0.85rem 2rem; border-radius:8px; font-weight:600;
+  text-decoration:none !important; transition:background 0.3s;
+}
+.mid-cta a:hover { background:var(--gold-hover); }
+
 </style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -127,19 +449,25 @@ footer a{color:#C9A96E}
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="https://leavepeo.com/" class="nav-logo">LeavePEO</a>
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="/" class="logo">Leave<span>PEO</span></a>
+  <button class="mobile-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-links">
-    <a href="https://leavepeo.com/#why">Why Leave</a>
-    <a href="https://leavepeo.com/#process">Our Process</a>
-    <a href="https://leavepeo.com/blog">Blog</a>
-    <a href="https://leavepeo.com/about">About</a>
-    <a href="https://leavepeo.com/faq">FAQ</a>
-    <a href="https://leavepeo.com/contact" class="nav-cta">Get Free Analysis</a>
+    <a href="/#why">Why Leave</a>
+    <a href="/#process">Our Process</a>
+    <a href="/#services">Services</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About</a>
+    <a href="/faq">FAQ</a>
+    <a href="/contact" class="btn btn-primary active">Get Free Analysis</a>
   </div>
 </nav>
 
+<main role="main">
+
+<article class="article-wrap">
 <!-- ARTICLE HEADER -->
 <div class="article-header">
   <span class="article-tag">Case Study</span>
@@ -367,7 +695,7 @@ footer a{color:#C9A96E}
 <div class="mid-cta">
   <h3>Want to See Your Numbers?</h3>
   <p>Every PEO invoice tells a different story. The only way to know yours is to run the analysis. Free. No obligation. Takes about two weeks.</p>
-  <a href="https://leavepeo.com/contact">Get Your Free Analysis &rarr;</a>
+  <a href="/contact">Get Your Free Analysis &rarr;</a>
 </div>
 
 <h2>What This Means for Your Company</h2>
@@ -395,23 +723,76 @@ footer a{color:#C9A96E}
 <div class="mid-cta">
   <h3>Ready to See What You'd Save?</h3>
   <p>No cost. No obligation. Just real numbers from your actual invoices, compared to real market quotes. Backed by IMA Financial Group, the 2nd largest independent brokerage in the country.</p>
-  <a href="https://leavepeo.com/contact">Get Your Free Analysis &rarr;</a>
+  <a href="/contact">Get Your Free Analysis &rarr;</a>
 </div>
 
 </div>
+</article>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="https://leavepeo.com/">Home</a>
-    <a href="https://leavepeo.com/blog">Blog</a>
-    <a href="https://leavepeo.com/about">About</a>
-    <a href="https://leavepeo.com/faq">FAQ</a>
-    <a href="https://leavepeo.com/contact">Contact</a>
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo">Leave<span>PEO</span></a>
+      <p>National PEO exit practice helping companies transition from PEOs to standalone benefits, payroll, and HRIS solutions. A practice of IMA Financial Group.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="/#why">Why Leave a PEO</a>
+      <a href="/#process">Our Process</a>
+      <a href="/#services">Services</a>
+      <a href="/#results">Results</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="/blog-peo-exit-checklist">PEO Exit Checklist</a>
+      <a href="/blog">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a>
+      <a href="tel:+13035707309">303-570-7309</a>
+      <a href="https://calendly.com/petersustr/new-meeting" target="_blank" rel="noopener">Schedule a Call</a>
+    </div>
   </div>
-  <p>&copy; 2026 LeavePEO.com &mdash; A National Practice of <a href="https://imafg.com">IMA Financial Group</a></p>
-  <p style="margin-top:.5rem">Email: <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a> &nbsp;|&nbsp; Phone: <a href="tel:+13035707309">303-570-7309</a></p>
+  <div class="footer-bottom">
+    <p>© 2026 LeavePEO.com — National PEO Exit Practice at IMA Financial Group. All rights reserved.</p>
+  </div>
 </footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Animate elements on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+// Show submission confirmation if ?submitted=true is in URL
+if (window.location.search.indexOf('submitted=true') !== -1) {
+  document.getElementById('submittedBanner').classList.add('show');
+  // Scroll to the banner
+  document.getElementById('submittedBanner').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Fire GA event for form submission
+  if (typeof gtag === 'function') {
+    gtag('event', 'form_submission', {
+      'event_category': 'lead_generation',
+      'event_label': 'contact_page'
+    });
+  }
+}
+</script>
 
 </body>
 </html>

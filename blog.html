@@ -1,85 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F51MZYJYMK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F51MZYJYMK');
+</script>
+
 <meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%235B7B6A%27/%3E%3Ctext x=%278%27 y=%2724%27 font-family=%27Georgia,serif%27 font-weight=%27bold%27 font-size=%2722%27 fill=%27%23F5F0EB%27%3EL%3C/text%3E%3Ctext x=%2717%27 y=%2724%27 font-family=%27Georgia,serif%27 font-weight=%27bold%27 font-size=%2722%27 fill=%27%23C9A96E%27%3EP%3C/text%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | PEO Exit Insights & Guides | LeavePEO.com</title>
 <meta name="description" content="Guides, cost analyses, case studies, and practical advice on PEO exits from the team at IMA Financial Group.">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F51MZYJYMK"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F51MZYJYMK');</script>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://leavepeo.com/blog">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leavepeo.com/blog">
+<meta property="og:title" content="Blog | PEO Exit Insights & Guides | LeavePEO.com">
+<meta property="og:description" content="Guides, cost analyses, case studies, and practical advice on PEO exits from the team at IMA Financial Group.">
+<meta property="og:site_name" content="LeavePEO.com">
+
+<!-- Preconnect -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',-apple-system,sans-serif;color:#1F2D3D;line-height:1.7;background:#fff}
-a{color:#C9A96E;text-decoration:none;transition:color .2s}
-a:hover{color:#B89A52}
-
-nav{background:#1F2D3D;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.3)}
-.nav-logo{font-size:1.4rem;font-weight:700;color:#C9A96E;letter-spacing:1px}
-.nav-links{display:flex;gap:1.5rem;align-items:center}
-.nav-links a{color:#ccc;font-size:.9rem;transition:color .2s}
-.nav-links a:hover{color:#C9A96E}
-.nav-cta{background:#C9A96E;color:#1F2D3D !important;padding:.5rem 1.2rem;border-radius:6px;font-weight:600;font-size:.85rem}
-.nav-cta:hover{background:#B89A52}
-
-.blog-hero{text-align:center;padding:3.5rem 2rem 2.5rem;background:#f8f8f8}
-.blog-hero h1{font-size:2.6rem;font-weight:800;color:#1F2D3D;margin-bottom:.5rem}
-.blog-hero p{font-size:1.05rem;color:#666;max-width:600px;margin:0 auto}
-
-.blog-grid{max-width:900px;margin:0 auto;padding:2.5rem 2rem}
-.blog-card{display:block;border:1px solid #e8e8e8;border-radius:12px;padding:2rem;margin-bottom:1.5rem;transition:all .3s;text-decoration:none;color:inherit}
-.blog-card:hover{border-color:#C9A96E;box-shadow:0 4px 16px rgba(0,0,0,.06);transform:translateY(-2px)}
-.blog-tag{display:inline-block;background:#ECE5D9;color:#5B7B6A;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.75rem}
-.blog-tag.featured{background:#1F2D3D;color:#C9A96E}
-.blog-card h2{font-size:1.35rem;font-weight:700;color:#1F2D3D;margin-bottom:.6rem;line-height:1.3}
-.blog-card p{font-size:.95rem;color:#555;margin-bottom:.75rem;line-height:1.6}
-.blog-card .read-link{font-size:.9rem;color:#C9A96E;font-weight:600}
-.blog-card .read-link:hover{color:#B89A52}
-
-.blog-cta{text-align:center;padding:3rem 2rem;background:#1F2D3D;margin-top:2rem}
-.blog-cta h2{color:#fff;font-size:1.6rem;margin-bottom:.8rem}
-.blog-cta p{color:#999;margin-bottom:1.5rem}
-.blog-cta a{display:inline-block;background:#C9A96E;color:#1F2D3D;padding:.75rem 2rem;border-radius:8px;font-weight:700}
-.blog-cta a:hover{background:#B89A52}
-
-footer{background:#1F2D3D;color:#888;padding:2rem;text-align:center}
-.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
-.footer-links a{color:#888;font-size:.85rem}
-.footer-links a:hover{color:#C9A96E}
-footer p{font-size:.8rem}
-footer a{color:#C9A96E}
-
-@media(max-width:768px){
-  .blog-hero h1{font-size:1.8rem}
-  .blog-grid{padding:1.5rem 1rem}
-  .nav-links{gap:.8rem}
+:root {
+  --cream: #F5F0EB;
+  --cream-dark: #EFE8DB;
+  --warm-gray: #DCD5C9;
+  --sage: #5B7B6A;
+  --sage-light: #739987;
+  --sage-dim: rgba(91,123,106,0.10);
+  --charcoal: #2C2C2C;
+  --dark-text: #2C2C2C;
+  --mid-text: #4B5563;
+  --light-text: #6B7280;
+  --rust: #B85C3A;
+  --gold: #C9A96E;
+  --white: #FFFFFF;
+  --navy: #1F2D3D;
+  --navy-hover: #2A3D52;
+  --gold-hover: #B89A52;
 }
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Inter',-apple-system,sans-serif; background:var(--cream); color:var(--dark-text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+/* ===== NAV ===== */
+nav {
+  position:fixed; top:0; width:100%; z-index:100;
+  padding:0.9rem 5%;
+  display:flex; justify-content:space-between; align-items:center;
+  background:rgba(245,240,235,0.94); backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(91,123,106,0.08);
+  transition:box-shadow 0.3s;
+}
+nav.scrolled { box-shadow:0 2px 20px rgba(0,0,0,0.06); }
+.logo { font-family:'Source Serif 4',serif; font-size:1.5rem; font-weight:800; color:var(--charcoal); letter-spacing:-0.5px; text-decoration:none; }
+.logo span { color:var(--sage); }
+.nav-links { display:flex; gap:2rem; align-items:center; }
+.nav-links a { color:var(--mid-text); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.3s; }
+.nav-links a:hover { color:var(--sage); }
+.nav-links a.active { color:var(--sage); font-weight:600; }
+.mobile-toggle { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; }
+.mobile-toggle span { display:block; width:22px; height:2px; background:var(--charcoal); margin:5px 0; transition:0.3s; }
+
+.btn {
+  padding:0.7rem 1.6rem; border-radius:8px;
+  font-weight:600; font-size:0.88rem; cursor:pointer;
+  transition:all 0.3s ease; text-decoration:none;
+  display:inline-flex; align-items:center; gap:0.5rem; border:none;
+  font-family:'Inter',-apple-system,sans-serif;
+}
+.btn-primary { background:var(--navy); color:var(--white); }
+.btn-primary:hover { background:var(--navy-hover); transform:translateY(-2px); box-shadow:0 8px 24px rgba(31,45,61,0.25); }
+
+/* ===== PAGE HERO ===== */
+.page-hero {
+  padding:8.5rem 5% 3.5rem; position:relative; overflow:hidden;
+  background:var(--white);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.page-hero::before {
+  content:''; position:absolute; top:-30%; right:-15%;
+  width:600px; height:600px;
+  background:radial-gradient(circle,rgba(91,123,106,0.06) 0%,transparent 60%);
+  border-radius:50%;
+}
+.page-hero-inner {
+  max-width:800px; margin:0 auto; text-align:center;
+  position:relative; z-index:2;
+}
+.hero-eyebrow {
+  font-size:0.78rem; font-weight:600; letter-spacing:1.5px;
+  text-transform:uppercase; color:var(--sage);
+  margin-bottom:1.25rem;
+}
+.hero-eyebrow::before { content:'— '; }
+.hero-eyebrow::after { content:' —'; }
+.page-hero h1 {
+  font-family:'Source Serif 4',serif;
+  font-size:3rem; line-height:1.12; font-weight:800;
+  color:var(--charcoal); letter-spacing:-1px;
+  margin-bottom:1.25rem;
+}
+.page-hero h1 em { font-style:italic; color:var(--sage); }
+.hero-sub {
+  font-size:1.1rem; color:var(--mid-text); line-height:1.7;
+  max-width:560px; margin:0 auto;
+}
+
+/* ===== CONTACT LAYOUT ===== */
+.contact-section {
+  padding:4rem 5% 5rem;
+  background:var(--cream);
+}
+.contact-grid {
+  display:grid; grid-template-columns:1.1fr 0.9fr;
+  gap:3.5rem; max-width:1050px; margin:0 auto;
+  align-items:start;
+}
+
+/* ===== FORM ===== */
+.form-card {
+  background:white; border-radius:16px;
+  padding:2.5rem; border:1px solid rgba(0,0,0,0.04);
+  box-shadow:0 4px 20px rgba(0,0,0,0.04);
+}
+.form-card h2 {
+  font-family:'Source Serif 4',serif; font-size:1.5rem;
+  font-weight:700; color:var(--charcoal); margin-bottom:0.5rem;
+}
+.form-card .form-sub {
+  font-size:0.88rem; color:var(--mid-text); line-height:1.6;
+  margin-bottom:2rem;
+}
+.form-row {
+  display:grid; grid-template-columns:1fr 1fr; gap:1rem;
+  margin-bottom:1rem;
+}
+.form-group { margin-bottom:1rem; }
+.form-group label {
+  display:block; font-size:0.78rem; font-weight:600;
+  color:var(--dark-text); margin-bottom:0.4rem;
+  text-transform:uppercase; letter-spacing:0.5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%; padding:0.75rem 1rem;
+  border:1.5px solid var(--warm-gray);
+  border-radius:8px; font-family:'Inter',-apple-system,sans-serif;
+  font-size:0.9rem; color:var(--dark-text);
+  background:var(--cream); transition:all 0.3s;
+  outline:none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color:var(--sage);
+  box-shadow:0 0 0 3px rgba(91,123,106,0.1);
+  background:white;
+}
+.form-group textarea {
+  resize:vertical; min-height:100px;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color:var(--light-text);
+}
+.form-group select {
+  appearance:none; cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%238A8A9A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 1rem center;
+  padding-right:2.5rem;
+}
+
+.submit-btn {
+  width:100%; padding:0.9rem;
+  background:var(--gold); color:var(--charcoal);
+  border:none; border-radius:8px;
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:0.95rem; font-weight:600;
+  cursor:pointer; transition:all 0.3s;
+  margin-top:0.5rem;
+}
+.submit-btn:hover {
+  background:#B89A52;
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(31,45,61,0.25);
+}
+.form-note {
+  text-align:center; margin-top:1rem;
+  font-size:0.78rem; color:var(--light-text);
+}
+
+/* ===== SIDEBAR ===== */
+.contact-sidebar {
+  display:flex; flex-direction:column; gap:1.5rem;
+}
+
+.sidebar-card {
+  background:white; border-radius:14px;
+  padding:2rem; border:1px solid rgba(0,0,0,0.04);
+  box-shadow:0 2px 10px rgba(0,0,0,0.03);
+}
+
+.book-card {
+  background:var(--charcoal); color:white;
+  text-align:center;
+}
+.book-card .book-icon {
+  width:56px; height:56px; border-radius:14px;
+  background:rgba(255,255,255,0.1);
+  display:inline-flex; align-items:center; justify-content:center;
+  margin-bottom:1.25rem;
+  color:var(--sage-light);
+}
+.book-card h3 {
+  font-family:'Source Serif 4',serif; font-size:1.25rem;
+  font-weight:700; margin-bottom:0.5rem;
+}
+.book-card p {
+  font-size:0.88rem; color:rgba(255,255,255,0.6);
+  line-height:1.6; margin-bottom:1.5rem;
+}
+.book-btn {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  padding:0.8rem 2rem; border-radius:8px;
+  background:var(--gold); color:var(--charcoal);
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:0.9rem; font-weight:600;
+  text-decoration:none; transition:all 0.3s;
+  border:none; cursor:pointer;
+}
+.book-btn:hover {
+  background:#B89A52;
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(31,45,61,0.25);
+}
+
+.expect-card h3 {
+  font-family:'Source Serif 4',serif; font-size:1.15rem;
+  font-weight:700; color:var(--charcoal); margin-bottom:1.25rem;
+}
+.expect-list {
+  list-style:none; display:flex; flex-direction:column; gap:1rem;
+}
+.expect-list li {
+  display:flex; gap:0.75rem; align-items:flex-start;
+}
+.expect-num {
+  width:28px; height:28px; border-radius:50%;
+  background:var(--sage-dim); color:var(--sage);
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.72rem; font-weight:700; flex-shrink:0;
+  margin-top:0.1rem;
+}
+.expect-text {
+  font-size:0.88rem; color:var(--mid-text); line-height:1.55;
+}
+.expect-text strong {
+  color:var(--dark-text); font-weight:600;
+}
+
+.trust-card {
+  background:var(--sage-dim); border:none;
+}
+.trust-card .trust-items {
+  display:flex; flex-direction:column; gap:0.75rem;
+}
+.trust-item {
+  display:flex; align-items:center; gap:0.75rem;
+}
+.trust-check {
+  color:var(--sage); flex-shrink:0;
+}
+.trust-item span {
+  font-size:0.88rem; color:var(--dark-text); font-weight:500;
+}
+
+/* ===== SUBMITTED MESSAGE ===== */
+.submitted-banner {
+  max-width:780px; margin:0 auto 2rem;
+  background:var(--sage); color:white;
+  border-radius:12px; padding:1.5rem 2rem;
+  display:none;
+}
+.submitted-banner.show { display:block; }
+.submitted-banner h3 {
+  font-family:'Source Serif 4',serif; font-size:1.25rem;
+  font-weight:700; margin-bottom:0.4rem;
+}
+.submitted-banner p {
+  font-size:0.92rem; color:rgba(255,255,255,0.85); line-height:1.55;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding:3.5rem 5% 2.5rem; background:var(--charcoal); color:rgba(255,255,255,0.5);
+}
+.footer-grid {
+  display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:3rem; max-width:1200px; margin:0 auto 2.5rem;
+}
+.footer-brand .logo { margin-bottom:1rem; }
+.footer-brand .logo span { color:var(--sage-light); }
+.footer-brand p { font-size:0.85rem; line-height:1.6; color:rgba(255,255,255,0.4); max-width:280px; }
+.footer-col h4 {
+  font-size:0.75rem; text-transform:uppercase; letter-spacing:1.5px;
+  color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:1rem;
+}
+.footer-col a {
+  display:block; color:rgba(255,255,255,0.55); text-decoration:none;
+  font-size:0.88rem; padding:0.3rem 0; transition:color 0.3s;
+}
+.footer-col a:hover { color:var(--sage-light); }
+.footer-bottom {
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding-top:2rem; text-align:center;
+  font-size:0.78rem; max-width:1200px; margin:0 auto;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease-out, transform 0.6s ease-out; }
+.animate.visible { opacity:1; transform:translateY(0); }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px) {
+  .nav-links { display:none; }
+  .mobile-toggle { display:block; }
+  nav.open .nav-links {
+    display:flex; flex-direction:column;
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--cream); padding:1.5rem 5%;
+    border-bottom:1px solid var(--warm-gray); gap:1rem;
+  }
+  .page-hero { padding-top:7rem; padding-bottom:2.5rem; }
+  .page-hero h1 { font-size:2.2rem; }
+  .contact-section { padding:2.5rem 5% 3.5rem; }
+  .contact-grid { grid-template-columns:1fr; gap:2rem; }
+  .form-row { grid-template-columns:1fr; }
+  .form-card { padding:1.75rem; }
+  .footer-grid { grid-template-columns:1fr; gap:2rem; }
+}
+
+/* ===== BLOG INDEX ===== */
+.blog-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:1.5rem; max-width:1100px; margin:0 auto;
+  padding:0 5%;
+}
+.blog-card {
+  display:flex; flex-direction:column;
+  background:var(--white); border:1px solid rgba(0,0,0,0.04);
+  border-radius:14px; padding:1.75rem;
+  text-decoration:none; color:inherit;
+  transition:all 0.3s ease;
+  box-shadow:0 2px 12px rgba(0,0,0,0.03);
+}
+.blog-card:hover {
+  border-color:var(--sage);
+  box-shadow:0 8px 28px rgba(91,123,106,0.15);
+  transform:translateY(-3px);
+}
+.blog-tag {
+  display:inline-block;
+  background:var(--sage-dim); color:var(--sage);
+  font-size:0.7rem; font-weight:600; letter-spacing:0.5px;
+  text-transform:uppercase;
+  padding:0.3rem 0.7rem; border-radius:4px;
+  margin-bottom:0.85rem; align-self:flex-start;
+}
+.blog-tag.featured { background:var(--navy); color:var(--gold); }
+.blog-card h2 {
+  font-family:'Source Serif 4',serif;
+  font-size:1.2rem; font-weight:700; line-height:1.3;
+  color:var(--charcoal); letter-spacing:-0.3px;
+  margin-bottom:0.65rem;
+}
+.blog-card p {
+  font-size:0.92rem; color:var(--mid-text); line-height:1.6;
+  margin-bottom:1rem; flex:1;
+}
+.blog-card .read-link {
+  font-size:0.85rem; color:var(--sage); font-weight:600;
+}
+.blog-cta {
+  text-align:center; padding:5rem 5% 6rem; background:var(--cream);
+  margin-top:4rem;
+}
+.blog-cta h2 {
+  font-family:'Source Serif 4',serif; font-size:2rem; font-weight:800;
+  color:var(--charcoal); margin-bottom:0.85rem; letter-spacing:-0.5px;
+}
+.blog-cta p {
+  font-size:1rem; color:var(--mid-text); margin-bottom:2rem;
+  max-width:540px; margin-left:auto; margin-right:auto;
+}
+.blog-cta a {
+  display:inline-block; background:var(--navy); color:var(--white);
+  padding:0.85rem 2rem; border-radius:8px;
+  font-weight:600; font-size:0.95rem;
+  text-decoration:none; transition:all 0.3s ease;
+}
+.blog-cta a:hover {
+  background:var(--navy-hover); transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(31,45,61,0.25);
+}
+@media (max-width:768px){ .blog-grid { grid-template-columns:1fr; } }
+
 </style>
+
 </head>
 <body>
 
-<nav>
-  <a href="https://leavepeo.com/" class="nav-logo">LeavePEO</a>
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="/" class="logo">Leave<span>PEO</span></a>
+  <button class="mobile-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-links">
-    <a href="https://leavepeo.com/#why">Why Leave</a>
-    <a href="https://leavepeo.com/#process">Our Process</a>
-    <a href="https://leavepeo.com/blog">Blog</a>
-    <a href="https://leavepeo.com/about">About</a>
-    <a href="https://leavepeo.com/faq">FAQ</a>
-    <a href="https://leavepeo.com/contact" class="nav-cta">Get Free Analysis</a>
+    <a href="/#why">Why Leave</a>
+    <a href="/#process">Our Process</a>
+    <a href="/#services">Services</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About</a>
+    <a href="/faq">FAQ</a>
+    <a href="/contact" class="btn btn-primary active">Get Free Analysis</a>
   </div>
 </nav>
 
-<div class="blog-hero">
-  <h1>PEO Exit Insights</h1>
-  <p>Guides, cost analyses, and practical advice from the team that's managed hundreds of PEO transitions.</p>
-</div>
+<main role="main">
 
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Insights</div>
+    <h1>PEO Exit <em>Insights</em></h1>
+    <p class="hero-sub">Guides, cost analyses, and practical advice from the team that's managed hundreds of PEO transitions.</p>
+  </div>
+</section>
+
+<section style="padding:3.5rem 0 1rem;">
 <div class="blog-grid">
- <a href="https://leavepeo.com/blog/peo-invoice-audit" class="blog-card">
+<a href="/peo-invoice-audit" class="blog-card">
     <span class="blog-tag featured">PEO Cost Analysis &mdash; New</span>
     <h2>5 Numbers to Pull from Your PEO Invoice Before Your Next Renewal</h2>
     <p>Before you sign another year with your PEO, run these five calculations. Most companies have never done this. What you find may change your decision entirely.</p>
@@ -87,7 +461,7 @@ footer a{color:#C9A96E}
   </a>
 
   <!-- NEW: ERTC Fine Print (April 2026) -->
-  <a href="https://leavepeo.com/blog-peo-ertc-fine-print" class="blog-card">
+  <a href="/blog-peo-ertc-fine-print" class="blog-card">
     <span class="blog-tag featured">Compliance | New</span>
     <h2>Before You Leave Your PEO: Read the ERTC Fine Print First</h2>
     <p>PEOs charge service fees on Employee Retention Tax Credits even after you leave. The IRS calls pass-through a civil matter. Here is what to check in your ERTC addendum before giving notice.</p>
@@ -95,7 +469,7 @@ footer a{color:#C9A96E}
   </a>
 
   <!-- NEW: Q4 Renewal Trap -->
-  <a href="https://leavepeo.com/blog-q4-renewal-trap" class="blog-card">
+  <a href="/blog-q4-renewal-trap" class="blog-card">
     <span class="blog-tag featured">Renewal Strategy | New</span>
     <h2>The Q4 PEO Renewal Trap: How Auto-Renewal Costs You 90 Days of Leverage</h2>
     <p>Most PEO contracts auto-renew with a 60-90 day notice window. Miss it and you are locked in for another full year. Here is how to spot the trap and reclaim your timing.</p>
@@ -103,7 +477,7 @@ footer a{color:#C9A96E}
   </a>
 
   <!-- NEW: Multi-State Tax Registration -->
-  <a href="https://leavepeo.com/blog-multi-state-tax-registration-sequence" class="blog-card">
+  <a href="/blog-multi-state-tax-registration-sequence" class="blog-card">
     <span class="blog-tag">Operations</span>
     <h2>Multi-State Tax Registration Sequence: The Step-By-Step Order for Leaving a PEO</h2>
     <p>When you leave a PEO, you must register your own EIN with every state where you have employees. The sequence matters. Here is the realistic timeline by state.</p>
@@ -111,7 +485,7 @@ footer a{color:#C9A96E}
   </a>
 
   <!-- Insperity Investigative (March 2026) -->
-  <a href="https://leavepeo.com/blog-insperity-problems" class="blog-card">
+  <a href="/blog-insperity-problems" class="blog-card">
     <span class="blog-tag featured">Investigative &mdash; New</span>
     <h2>Insperity Is in Trouble: What It Means for Your PEO and Why Now May Be the Time to Leave</h2>
     <p>Insperity posted a $7 million net loss in 2025, cut 4% of staff, and saw its stock drop over 60%. If you're an Insperity client, here's what the financial distress, rising healthcare costs, and declining service quality mean for your business.</p>
@@ -119,81 +493,134 @@ footer a{color:#C9A96E}
   </a>
 
 <!-- NEW: Case Study (March 2026) -->
-  <a href="https://leavepeo.com/blog-peo-exit-case-study" class="blog-card">
+  <a href="/blog-peo-exit-case-study" class="blog-card">
     <span class="blog-tag featured">Case Study — New</span>
     <h2>Inside a Real PEO Exit: How We Found $121K in Annual Savings for a 62-Employee Tech Company</h2>
     <p>A forensic walkthrough of an actual PEO exit analysis. Real invoices, real market quotes, real savings. See exactly how we took apart a PEO's bundled pricing and found $121,000 in annual savings — line by line.</p>
     <span class="read-link">Read the full case study &rarr;</span>
   </a>
 
-  <a href="https://leavepeo.com/blog-funding-options" class="blog-card">
+  <a href="/blog-funding-options" class="blog-card">
     <span class="blog-tag">Funding Strategy</span>
     <h2>Fully Insured vs. Level-Funded vs. Self-Funded: Which Is Right After Leaving Your PEO?</h2>
     <p>Your PEO kept you on a fully insured master plan. Now that you're leaving, you have options. Here's how to evaluate which funding mechanism fits your company's risk profile and budget.</p>
     <span class="read-link">Read article &rarr;</span>
   </a>
 
-  <a href="https://leavepeo.com/blog-cost-of-staying" class="blog-card">
+  <a href="/blog-cost-of-staying" class="blog-card">
     <span class="blog-tag">PEO Costs</span>
     <h2>How Much Does It Really Cost to Stay in a PEO?</h2>
     <p>Most companies in a PEO don't know what they're actually paying. We break down the hidden costs buried in bundled invoices, from admin fees to medical markups to workers' comp padding.</p>
     <span class="read-link">Read article &rarr;</span>
   </a>
 
-  <a href="https://leavepeo.com/blog-leave-adp-totalsource" class="blog-card">
+  <a href="/blog-leave-adp-totalsource" class="blog-card">
     <span class="blog-tag">ADP TotalSource</span>
     <h2>How to Leave ADP TotalSource: A Step-by-Step Guide</h2>
     <p>ADP TotalSource is the largest PEO in the country. Leaving it is completely doable, but you need a plan. Here's exactly how the process works, from contract review to go-live.</p>
     <span class="read-link">Read article &rarr;</span>
   </a>
 
-  <a href="https://leavepeo.com/blog-peo-exit-checklist" class="blog-card">
+  <a href="/blog-peo-exit-checklist" class="blog-card">
     <span class="blog-tag">Exit Checklist</span>
     <h2>PEO Exit Checklist: Everything You Need Before You Leave</h2>
     <p>A practical, line-by-line checklist from the team that's handled hundreds of PEO exits. Documents, timeline, benefits, HRIS, compliance, and what to expect at every phase.</p>
     <span class="read-link">Read article &rarr;</span>
   </a>
 
-  <a href="https://leavepeo.com/blog-workers-comp-epli" class="blog-card">
+  <a href="/blog-workers-comp-epli" class="blog-card">
     <span class="blog-tag">Workers' Comp & EPLI</span>
     <h2>Workers' Comp and EPLI Inside a PEO: What You're Really Paying</h2>
     <p>Your PEO bundles these coverages into your invoice and marks them up. Here's what that convenience actually costs and what standalone coverage looks like.</p>
     <span class="read-link">Read article &rarr;</span>
   </a>
 
-  <a href="https://leavepeo.com/blog-401k-transition" class="blog-card">
+  <a href="/blog-401k-transition" class="blog-card">
     <span class="blog-tag">401(k) Transition</span>
     <h2>Your 401(k) When Leaving a PEO: What Happens and How to Transition It</h2>
     <p>The 401(k) is one of the most misunderstood pieces of a PEO exit. Here's what actually needs to happen, when, and what to watch out for.</p>
     <span class="read-link">Read article &rarr;</span>
   </a>
 
-  <a href="https://leavepeo.com/blog-peo-tax-credits" class="blog-card">
+  <a href="/blog-peo-tax-credits" class="blog-card">
     <span class="blog-tag">Tax Credits</span>
     <h2>Is Your PEO Claiming Your Tax Credits?</h2>
     <p>PEOs file taxes under their own EIN. That means federal and state tax credits your business earned — WOTC, R&D, FICA tip credits — may be going to them, not you.</p>
     <span class="read-link">Read article &rarr;</span>
   </a>
-
 </div>
+</section>
 
 <div class="blog-cta">
   <h2>Ready to See What You'd Save?</h2>
-  <p>Free PEO exit analysis. No obligation. Backed by IMA Financial Group.</p>
-  <a href="https://leavepeo.com/contact">Get Your Free Analysis</a>
+  <p>Free PEO exit analysis. No obligation. Backed by IMA Financial Group, the 2nd largest independent brokerage in the country.</p>
+  <a href="/contact">Get Your Free Analysis</a>
 </div>
 
-<footer>
-  <div class="footer-links">
-    <a href="https://leavepeo.com/">Home</a>
-    <a href="https://leavepeo.com/blog">Blog</a>
-    <a href="https://leavepeo.com/about">About</a>
-    <a href="https://leavepeo.com/faq">FAQ</a>
-    <a href="https://leavepeo.com/contact">Contact</a>
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo">Leave<span>PEO</span></a>
+      <p>National PEO exit practice helping companies transition from PEOs to standalone benefits, payroll, and HRIS solutions. A practice of IMA Financial Group.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="/#why">Why Leave a PEO</a>
+      <a href="/#process">Our Process</a>
+      <a href="/#services">Services</a>
+      <a href="/#results">Results</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="/blog-peo-exit-checklist">PEO Exit Checklist</a>
+      <a href="/blog">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a>
+      <a href="tel:+13035707309">303-570-7309</a>
+      <a href="https://calendly.com/petersustr/new-meeting" target="_blank" rel="noopener">Schedule a Call</a>
+    </div>
   </div>
-  <p>&copy; 2026 LeavePEO.com &mdash; A National Practice of <a href="https://imafg.com">IMA Financial Group</a></p>
-  <p style="margin-top:.5rem">Email: <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a> &nbsp;|&nbsp; Phone: <a href="tel:+13035707309">303-570-7309</a></p>
+  <div class="footer-bottom">
+    <p>© 2026 LeavePEO.com — National PEO Exit Practice at IMA Financial Group. All rights reserved.</p>
+  </div>
 </footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Animate elements on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+// Show submission confirmation if ?submitted=true is in URL
+if (window.location.search.indexOf('submitted=true') !== -1) {
+  document.getElementById('submittedBanner').classList.add('show');
+  // Scroll to the banner
+  document.getElementById('submittedBanner').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Fire GA event for form submission
+  if (typeof gtag === 'function') {
+    gtag('event', 'form_submission', {
+      'event_category': 'lead_generation',
+      'event_label': 'contact_page'
+    });
+  }
+}
+</script>
 
 </body>
 </html>
