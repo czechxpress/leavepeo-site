@@ -1,0 +1,20 @@
+# This file is a NOTE, not an active deployment. Netlify deploys automatically
+# from main branch pushes via the Netlify dashboard's GitHub integration.
+# Leaving this here as documentation.
+#
+# To verify Netlify is wired correctly:
+#   1. Netlify dashboard -> Site settings -> Build & deploy
+#   2. Confirm "Repository" points to this repo, branch = main, publish dir = "."
+#   3. After a push, watch the Deploys tab. It should kick off within ~30 seconds.
+#
+# If you ever need a manual rebuild without a push:
+#   curl -X POST "https://api.netlify.com/build_hooks/<HOOK_ID>"
+#   (set the build hook in Netlify -> Site settings -> Build hooks)
+name: Deploy notes
+on:
+  workflow_dispatch:
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Netlify handles deploys automatically. See file for details."
